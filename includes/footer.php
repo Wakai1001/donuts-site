@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../common/css/reset.css">
-<link rel="stylesheet" href="../common/css/common.css">
-</head>
-<body>
-  
+
 <footer>
   <div id="footer_nav">
     <p><a href="">よくある質問</a></p>
@@ -16,12 +7,12 @@
   </div>
   
   <div id="sns_area">
-    <a href="#"><img src="../common/images/instagram.png" alt="インスタグラムのアイコン"></a>
-    <a href="#"><img src="../common/images/facebook.png" alt="フェイスブックのアイコン"></a>
-    <a href="#"><img src="../common/images/x.png" alt="エックスのアイコン"></a>
+    <a href="#"><img src="common/images/instagram.png" alt="インスタグラムのアイコン"></a>
+    <a href="#"><img src="common/images/facebook.png" alt="フェイスブックのアイコン"></a>
+    <a href="#"><img src="common/images/x.png" alt="エックスのアイコン"></a>
   </div>
   
-  <p id="footer_logo_area"><img src="../common/images/logo.svg" alt="ロゴ画像"></p>
+  <p id="footer_logo_area"><img src="common/images/logo.svg" alt="ロゴ画像"></p>
   
 <small>Copyright (C) c.c.donuts All Rights Reserved</small>
 </footer>
