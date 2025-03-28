@@ -1,1 +1,58 @@
 @charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* 共通footer領域↓ */
+
+footer {
+  padding: 12px;
+  height: 310px;
+  background-color: #ede0d4;
+}
+
+#footer_nav {
+  color: #7f5539;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+#footer_nav p {
+  margin-bottom: 20px;
+  padding: 4px 12px;
+  border-left: 2px solid #b392ac;
+}
+
+#sns_area {
+  width: 134px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#sns_area a img {
+  width: 32px;
+}
+
+#footer_logo_area {
+  text-align: right;
+}
+
+#footer_logo_area img {
+  margin-top: 24px;
+  width: 72px;
+}
+
+small {
+  display: block;
+  margin-top: 24px;
+  text-align: center;
+  font-size: 8px;
+  color: #7f5539;
+}
