@@ -12,6 +12,86 @@ session_start();
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="common/css/common.css">
+
+<?php
+// .phpの前の部分を取得
+ $page=pathinfo($_SERVER['PHP_SELF']);
+
+//  各ページのCSSを読み込ませる
+echo '<link rel="stylesheet" href="common/css/';
+echo $page['filename'],'.css';
+echo '">';
+
+// サイト名を変数に代入
+$title='c.c.donuts';
+
+// ページごとにタイトルを変更させる
+switch($page["filename"]){
+  case 'product' :
+    $title= '商品一覧ページ&#65372;'.$title;
+  break;
+  case 'detail' :
+    $title= '商品詳細ページ&#65372;'.$title;
+  break;
+  case 'login-input' :
+    $title= 'ログイン-入力ページ&#65372;'.$title;
+  break;
+  case 'login-complete' :
+    $title= 'ログイン-完了ページ&#65372;'.$title;
+  break;
+  case 'logout-input' :
+    $title= 'ログアウト-入力ページ&#65372;'.$title;
+  break;
+  case 'logout-complete' :
+    $title= 'ログアウト-完了ページ&#65372;'.$title;
+  break;
+  case 'customer-input' :
+    $title= '会員登録-入力ページ&#65372;'.$title;
+  break;
+  case 'customer-confirm' :
+    $title= '会員登録-入力確認ページ&#65372;'.$title;
+  break;
+  case 'customer-complete' :
+    $title= '会員登録-完了ページ&#65372;'.$title;
+  break;
+  case 'cart' :
+    $title= 'カート-商品一覧ページ&#65372;'.$title;
+  break;
+  case 'cart-show' :
+    $title= 'カート-商品一覧呼び出しページ&#65372;'.$title;
+  break;
+  case 'cart-input' :
+    $title= 'カート-追加ページ&#65372;'.$title;
+  break;
+  case 'cart-delete' :
+    $title= 'カート-削除ページ&#65372;'.$title;
+  break;
+  case 'card-input' :
+    $title= 'クレジットカード情報-入力ページ&#65372;'.$title;
+  break;
+  case 'card-confirm' :
+    $title= 'クレジットカード情報-入力確認ページ&#65372;'.$title;
+  break;
+  case 'card-complete' :
+    $title= 'クレジットカード情報-完了ページ&#65372;'.$title;
+  break;
+  case 'purchase-confirm' :
+    $title= '購入-確認ページ&#65372;'.$title;
+  break;
+  case 'purchase-complete' :
+    $title= '購入-完了ページ&#65372;'.$title;
+  break;
+  default:
+  $title;
+  break;
+}
+
+echo '<title>';
+echo $title;
+echo '</title>';
+
+?>
+  
 </head>
 <body>
 
