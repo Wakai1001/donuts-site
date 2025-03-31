@@ -363,7 +363,7 @@ small {
     text-align: center;
   }
 
-  #footer_logo_area img {
+  #footer_logo_area a img {
     margin-top: 60px;
     width: 140px;
   }
