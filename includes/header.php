@@ -1,3 +1,7 @@
+<?php
+session_start(); 
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -10,10 +14,51 @@
 <link rel="stylesheet" href="common/css/common.css">
 </head>
 <body>
-<header>
 
 
+  <header>
 
+    <div class="header_inner">
+      <nav class="header_nav">
+          <!-- ハンバーガーメニュー↓ -->
+        <button id="hamburger_menu">
+            <span class="nav_icon_top"></span>
+            <span class="nav_icon_center"></span>
+            <span class="nav_icon_bottom"></span>
+         </button>
+          <!-- ドロワーメニュー↓ -->
+          <ul id="nav_menu">
+            <li><a href="">top</a></li>
+            <li><a href="">商品一覧</a></li>
+            <li><a href="">よくある質問</a></li>
+            <li><a href="">問い合わせ</a></li>
+            <li><a href="">当サイトのポリシー</a></li>
+          </ul>
+      </nav>
 
+      <h1>
+        <img src="common/images/logo.svg" alt="ロゴ画像">
+      </h1>
+      
+      <?php if(isset($_SESSION['user_id'])): ?>
+      <div class="login_nav" id="login_after">
+        <a href="logout-input.php"><img src="common/images/login-icon.png" alt=""><p>ログアウト</p></a>
+        <a href="cart.php"><img src="common/images/cart-icon.png" alt=""><p>カート</p></a>
+      </div>
+      <?php else: ?>
+      <div class="login_nav" id="login_before">
+        <a href="login-input.php"><img src="common/images/login-icon.png" alt=""><p>ログイン</p></a>
+        <a href="cart.php"><img src="common/images/cart-icon.png" alt=""><p>カート</p></a>
+      </div>
+      <?php endif; ?>
+      
+    </div>
 
-</header>
+    <div class="search_design">
+      <form action="" method="post" id="search_area">
+        <input type="text" name="search" class="search_keyword">
+        <input type="submit" class="search_submit">
+      </form>
+    </div>
+
+  </header>

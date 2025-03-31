@@ -12,7 +12,7 @@
     <a href="#"><img src="common/images/x.png" alt="エックスのアイコン"></a>
   </div>
   
-  <p id="footer_logo_area"><img src="common/images/logo.svg" alt="ロゴ画像"></p>
+  <p id="footer_logo_area"><a href="#"><img src="common/images/logo.svg" alt="ロゴ画像"></a></p>
   
 <small>Copyright (C) c.c.donuts All Rights Reserved</small>
 </footer>
