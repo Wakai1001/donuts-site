@@ -25,26 +25,25 @@
 }
 
 #login_area {
-  height: 84px;
-  margin: 0 40px 24px;
+  height: 120px;
+  margin: 0 40px 80px;
   border: 2px solid #e8c2ca;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
 }
 
-.top_page_return {
-  margin: 0 40px 84px;
+#login_area p {
   font-size: 12px;
   line-height: 1;
   letter-spacing: 0;
-  text-align: right;
 }
 
-.top_page_return a {
-  padding-bottom: 4px;
-  border-bottom: 1px solid #7f5539;
-  text-transform: uppercase;
+#submit_logout {
+  padding: 16px 44px;
+  color: #fff;
+  background-color: #7f5539;
 }
 
 @media screen and (min-width:768px) {
@@ -57,26 +56,24 @@
   }
 
   #login_area {
-    height: 184px;
-    margin: 0 auto 24px;
+    height: 284px;
+    margin: 0 auto 482px;
     width: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
-  .top_page_return {
-    margin: 0 auto 378px;
-    width: 600px;
-    font-size: 12px;
+  #login_area p {
+    font-size: 24px;
     line-height: 1;
     letter-spacing: 0;
-    text-align: right;
   }
 
-  .top_page_return a {
-    padding-bottom: 4px;
-    border-bottom: 1px solid #7f5539;
-    text-transform: uppercase;
+  #submit_logout {
+    padding: 20px 80px;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0;
+    color: #fff;
+    background-color: #7f5539;
   }
+
 }

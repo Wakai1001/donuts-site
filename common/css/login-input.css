@@ -18,13 +18,10 @@
 
 .login_now {
   margin: 32px 0 60px;
-  text-align: center;
-}
-
-.login_now p {
   font-size: 20px;
   line-height: 1;
   letter-spacing: 0;
+  text-align: center;
 }
 
 #login_area {
@@ -47,6 +44,7 @@
 #email_login,
 #passsword_login {
   height: 20px;
+  padding: 2px;
   width: 100%;
   border: 1px solid #7f5539;
 }
@@ -81,9 +79,6 @@
 @media screen and (min-width:768px) {
   .login_now {
     margin: 80px auto;
-  }
-
-  .login_now p {
     font-size: 32px;
     line-height: 1;
     letter-spacing: 0;
