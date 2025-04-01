@@ -32,7 +32,7 @@ echo '<input type="text" name="mail" value="',$mail,'">';
 echo '</td></tr>';
 echo '<tr><td class=title>パスワード<span class=caution>（必須）</span><br>';
 echo '<p class=match>A-Z、a-z、0-9を少なくとも各1つは含めて8文字以上で入力してください。</p></td><td>';
-echo '<input type="text" name="password" value="',$password,'">';
+echo '<input type="password" name="password" value="',$password,'">';
 echo '</td></tr>';
 echo '</table>';
 echo '<input type="submit" value="ご入力内容を確認する">';
