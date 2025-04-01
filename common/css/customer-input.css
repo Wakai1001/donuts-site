@@ -1,0 +1,104 @@
+@charset "utf-8";
+
+/* header  */
+header {
+  background: #fff;
+  height: 102px;
+}
+
+.header_inner {
+  padding: 0;
+  display: block;
+  height: 100%;
+}
+
+.header_nav {
+  display: none;
+}
+
+.login_nav {
+  display: none;
+}
+
+.search_design {
+  display: none;
+}
+
+h1 {
+  left: 12%;
+  top: 15%;
+}
+
+
+/* design */
+main {
+  color: #7F5539;
+  max-width: 295px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
+  margin-bottom: 8px;
+}
+
+.caution {
+  color: #BF0000;
+}
+
+.match {
+  font-size: 8px;
+  color: #BF0000;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+
+tr {
+  height: 40px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+tr:last-of-type {
+  height: 56px;
+}
+
+td {
+  display: block;
+
+}
+
+input[type=text] {
+  border: #7F5539 1px solid;
+  width: 295px;
+  height: 20px;
+}
+
+table {
+  margin-bottom: 20px;
+}
+
+input[type=submit] {
+  background-color: #7F5539;
+  color: #fff;
+  padding: 16px 20px;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
+  margin-left: 15%;
+}
+
+form {
+  margin-bottom: 80px;
+}
