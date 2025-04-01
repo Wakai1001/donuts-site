@@ -103,7 +103,7 @@ echo '</title>';
             <span class="nav_icon_bottom"></span>
          </button>
           <!-- ドロワーメニュー↓ -->
-          <ul id="nav_menu">
+          <ul class="nav_menu">
             <li><a href="">top</a></li>
             <li><a href="">商品一覧</a></li>
             <li><a href="">よくある質問</a></li>

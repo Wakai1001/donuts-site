@@ -16,6 +16,6 @@
   
 <small>Copyright (C) c.c.donuts All Rights Reserved</small>
 </footer>
-
+<script src="common/js/drawer-menu.js"></script>
 </body>
 </html>

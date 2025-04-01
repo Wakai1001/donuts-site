@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Noto Sans JP", sans-serif;
+  color: #7f5539;
 }
 
 /* 共通header領域↓ */
@@ -49,7 +50,8 @@ header {
 }
 
 #hamburger_menu .top_change {
-  transform: rotate(40deg);
+  background-color: #fff;
+  transform: rotate(45deg);
   transform-origin: left;
 }
 
@@ -58,44 +60,51 @@ header {
 }
 
 #hamburger_menu .bottom_change {
-  transform: rotate(-40deg);
+  background-color: #fff;
+  transform: rotate(-45deg);
   transform-origin: left;
 }
 
 /* ハンバーガーメニュー↑ */
 
 /* ドロワーメニュー↓ */
-#nav_menu {
-  display: none;
-
+.nav_menu {
   height: 100vh;
-  width: 40%;
+  padding: 0 12px;
+  width: 100%;
   background-color: #7f5539;
-  text-align: center;
   position: absolute;
   top: 0;
-  right: 0;
+  left: -100%;
   z-index: 20;
+  transform: rotateY(180deg);
+  transition: 1s;
 }
 
-#nav_menu li {
+.nav_menu.drawer_open {
+  left: 0;
+  transform: rotateY(0deg);
+}
+
+.nav_menu li {
   padding: 16px 12px;
   color: #fff;
   font-size: 16px;
   line-height: 1;
   letter-spacing: 0;
   text-transform: uppercase;
+  border-bottom: 1px solid #fff;
 }
 
-#nav_menu li:first-child {
-  margin-top: 60px;
+.nav_menu li:first-child {
+  margin-top: 123px;
 }
 
-#nav_menu li:last-child {
+.nav_menu li:last-child {
   margin-bottom: 30px;
 }
 
-#nav_menu li a {
+.nav_menu li a {
   display: block;
 }
 
@@ -136,6 +145,7 @@ h1 img {
 }
 
 .search_keyword {
+  padding: 0 2px;
   width: 100%;
   background-color: #fff;
   border: 1px solid #7f5539;
