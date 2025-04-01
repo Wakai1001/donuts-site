@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+/* header  */
+header {
+  background: #fff;
+  height: 102px;
+}
+
+.header_inner {
+  padding: 0;
+  display: block;
+  height: 100%;
+}
+
+.header_nav {
+  display: none;
+}
+
+.login_nav {
+  display: none;
+}
+
+.search_design {
+  display: none;
+}
+
+h1 {
+  left: 12%;
+  top: 15%;
+}

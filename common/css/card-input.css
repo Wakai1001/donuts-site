@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+li {
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.card_registration {
+  margin: 0 auto;
+  width: 79vw;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+
+.user_name {
+  border: 1px solid black;
+}
+
+/* .card_input {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 52px;
+} */
+
+.h2 {
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto 52px;
+}
+
+.require {
+  color: red;
+}
+
+.confirm {
+  display: flex;
+  color: #fff;
+  background: #7F5539;
+  width: 200px;
+  height: 48px;
+}
