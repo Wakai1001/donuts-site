@@ -1,0 +1,164 @@
+@charset "utf-8";
+
+/* header  */
+header {
+  background: #fff;
+  height: 102px;
+}
+
+.header_inner {
+  padding: 0;
+  display: block;
+  height: 100%;
+}
+
+.header_nav {
+  display: none;
+}
+
+.login_nav {
+  display: none;
+}
+
+.search_design {
+  display: none;
+}
+/* ロゴ画像 */
+h1 {
+  left: 12%;
+  top: 15%;
+}
+/* ご購入確認 */
+h2{
+  color: #7F5539;
+  font-size: 20px;
+  font-weight: regular;
+  line-height: 1;
+  margin: 20px 0 72px;
+
+}
+
+/* ご購入商品 */
+h3{
+  color: #7F5539;
+  font-size: 12px;
+  font-weight: regular;
+  line-height: 1;
+  margin-bottom: 20px;
+}
+
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  /* color: #59342E; */
+  /* background-color: #FDF9F5; */
+  margin: 0;
+  
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+
+/* h1, h2 {
+  margin: 10px 0;
+  font-weight: bold;
+} */
+
+/* .section {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #D1B8A2;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+} */
+
+.product, .total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  /* font-weight: bold;
+  margin-right: 5px; */
+  color: #7F5539;
+  font-size: 12px;
+  font-weight: regular;
+  line-height: 1;
+  margin: 12px 0;
+}
+
+.include_tax {
+  color: #333333;
+  font-size: 12px;
+  font-weight: regular;
+  line-height: 1;
+  margin: 12px 0 12px 12px;
+}
+.value {
+  color: #333333;
+  font-size: 12px;
+  font-weight: regular;
+  line-height: 1;
+  text-align:left; 
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #D1B8A2;
+  margin: 10px 0;
+}
+
+.purchase-button {
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #59342E;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #40251E;
+}
+
+.product-table {
+  margin: 10px auto;
+  max-width: 400px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  border: 1px solid #D1B8A2;
+}
+
+th {
+  background-color: #F7EFEA;
+  font-weight: bold;
+  color: #59342E;
+  text-align: left;
+  width: 30%;
+}
+
+td {
+  background-color: #FFFFFF;
+  color: #59342E;
+  text-align: right;
+}
+
+.separator hr {
+  border: 0;
+  border-top: 1px solid #D1B8A2;
+  margin: 5px 0;
+}
