@@ -1,6 +1,5 @@
 <?php require 'includes/header.php' ?>
-<!-- 松井 -->
-
+test
 
 
 <?php require 'includes/footer.php' ?>

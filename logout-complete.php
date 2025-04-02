@@ -4,6 +4,7 @@
 <main>
 
   <p class="guest_name_area">ようこそ&#12288;ゲスト様</p>
+  <hr>
   <h2 class="login_now">ログアウト完了</h2>
   <div id="login_area">
     <p>ログアウトが完了しました。</p>

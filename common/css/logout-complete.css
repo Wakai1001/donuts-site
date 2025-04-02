@@ -13,7 +13,6 @@
   font-size: 12px;
   line-height: 1;
   letter-spacing: 0;
-  border-bottom: 1px solid #7f5539;
 }
 
 .login_now {
@@ -54,6 +53,12 @@
 }
 
 @media screen and (min-width:768px) {
+
+  .guest_name_area {
+    margin: 0 auto;
+    width: 1200px;
+    max-width: 100%;
+  }
 
   .login_now {
     margin: 80px auto;
