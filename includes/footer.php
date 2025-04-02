@@ -8,9 +8,9 @@
     </div>
     
     <div id="sns_area">
-      <a href="#"><img src="common/images/instagram.png" alt="インスタグラムのアイコン"></a>
-      <a href="#"><img src="common/images/facebook.png" alt="フェイスブックのアイコン"></a>
-      <a href="#"><img src="common/images/x.png" alt="エックスのアイコン"></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="common/images/instagram.png" alt="インスタグラムのアイコン"></a>
+      <a href="https://www.facebook.com/" target="_blank"><img src="common/images/facebook.png" alt="フェイスブックのアイコン"></a>
+      <a href="https://x.com/" target="_blank"><img src="common/images/x.png" alt="エックスのアイコン"></a>
     </div>
     
     <p id="footer_logo_area"><a href="#"><img src="common/images/logo.svg" alt="ロゴ画像"></a></p>

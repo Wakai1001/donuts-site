@@ -1,12 +1,7 @@
-<?php require 'includes/header.php' ?>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="common/css/reset.css">
-  <link rel="stylesheet" href="common/css/common.css">
-  <link rel="stylesheet" href="common/css/cart-input.css">
-  <title>カート - 追加ページ | C.C.Donuts</title>
-</head>
+<?php 
+session_start(); 
+require 'includes/header.php'
+?>
 
 <body>
   <p class="breadcrumbs"><a href="index.php">TOP</a> &gt; カート</p>

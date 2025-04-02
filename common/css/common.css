@@ -20,7 +20,6 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
 }
 
 /* ハンバーガーメニュー↓ */
@@ -249,7 +248,6 @@ small {
   #hamburger_menu {
     height: 38px;
     width: 48px;
-    position: relative;
   }
 
   #hamburger_menu span {
