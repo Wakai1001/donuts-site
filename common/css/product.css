@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+body {}
+
+/* 商品一覧 */
+h2 {
+  width: 30vw;
+  /* width: 152px; */
+  /* margin: auto; */
+  /* 絶対ずれるから気を付けて */
+  margin-left: 30vw;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: bold;
+  color: black;
+  padding-bottom: 6px;
+  /* display: inline-block;  */
+  color: black;
+  border-bottom: 4px solid #ffd233;
+}
+
+
+
+
+
+
+/* バラエティセット */

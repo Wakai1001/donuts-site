@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif;
+  color: #7f5539;
+}
+
+.guest_name_area {
+  padding: 12px 20px;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.login_now {
+  margin: 32px 0 60px;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+#login_area {
+  height: 120px;
+  margin: 0 40px 80px;
+  border: 2px solid #e8c2ca;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#login_area p {
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+#submit_logout {
+  padding: 16px 44px;
+  color: #fff;
+  background-color: #7f5539;
+}
+
+@media screen and (min-width:768px) {
+
+  .guest_name_area {
+    margin: 0 auto;
+    width: 1200px;
+    max-width: 100%;
+  }
+
+  .login_now {
+    margin: 80px auto;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  #login_area {
+    height: 284px;
+    margin: 0 auto 482px;
+    width: 600px;
+  }
+
+  #login_area p {
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  #submit_logout {
+    padding: 20px 80px;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0;
+    color: #fff;
+    background-color: #7f5539;
+  }
+
+}

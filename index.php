@@ -1,19 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="common/css/reset.css">
-  <link rel="stylesheet" href="common/css/top.css">
-  <link rel="stylesheet" href="common/css/common.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-  <title>Top Page</title>
-</head>
-
-<body>
   <?php require 'includes/header.php' ?>
   <p class="guest">ようこそ　　ゲスト様</p>
   <img src="common/images/hero-sp.jpg" alt="main visual" class="hero_sp">
@@ -121,3 +106,4 @@
 </body>
 
 </html>
+
