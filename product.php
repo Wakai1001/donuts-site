@@ -85,4 +85,7 @@ echo '<main>';
   echo '</main>';
 
 ?>
+
+
+
 <?php require 'includes/footer.php' ?>
