@@ -1,4 +1,7 @@
-<?php require 'includes/header.php' ?>
+<?php 
+session_start(); 
+require 'includes/header.php'
+?>
 
 
 
