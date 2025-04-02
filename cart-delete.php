@@ -14,7 +14,7 @@
   <p class="cart_input">カートから商品を削除しました。
   </p>
 
-  <img src="common/images/fruit-donuts-1.jpg" alt="フルーツドーナツイメージ" class="donuts_image">
+  <img src="common/images/fruit-donuts-1.jpg" alt="フルーツドーナツimg" class="donuts_image">
 
 <p class="merchandise">フルーツドーナツセット（12個入り）
 </p>
