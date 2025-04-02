@@ -79,11 +79,13 @@ td {
 
 }
 
-input[type=text] {
+input[type=text],
+input[type=password] {
   border: #7F5539 1px solid;
   width: 295px;
   height: 20px;
 }
+
 
 table {
   margin-bottom: 20px;

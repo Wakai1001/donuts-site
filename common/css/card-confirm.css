@@ -1,0 +1,71 @@
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  color: #59342E;
+  background-color: #FDF9F5;
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  text-align: center;
+}
+
+header {
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 100px;
+}
+
+h1, h2 {
+  margin: 10px 0;
+  font-weight: bold;
+}
+
+.section {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #D1B8A2;
+  border-radius: 8px;
+  background-color: #FFFFFF;
+}
+
+.product, .total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.value {
+  text-align: right;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #D1B8A2;
+  margin: 10px 0;
+}
+
+.purchase-button {
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #59342E;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #40251E;
+}
