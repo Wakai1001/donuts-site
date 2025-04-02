@@ -1,17 +1,22 @@
-<?php require 'includes/header.php' ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" href="common/css/reset.css">
+  <!-- <link rel="stylesheet" href="common/css/card-confirm.css"> -->
+  <!-- <link rel="stylesheet" href="common/css/common.css"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
     <title>ご購入確認 | CC Donuts</title>
-    
-    <link rel="stylesheet" href="card-confirm.css">
 </head>
 <body>
+  
+<?php require 'includes/header.php' ?>
     <div class="container">
         <!-- ヘッダー -->
         <header>
-            <img src="images/logo.png" alt="CC Donuts" class="logo">
+          <!-- <img src="images/logo.png" alt="CC Donuts" class="logo"> -->
             <h1>ご購入確認</h1>
         </header>
 
@@ -71,13 +76,8 @@
             <button>ご購入を確定する</button>
         </div>
 
-        <!-- フッター -->
-        <?php require 'footer.php'; ?>
+       
     </div>
+    <?php require 'includes/footer.php' ?>
 </body>
 </html>
-
-
-
-
-<?php require 'includes/footer.php' ?>
