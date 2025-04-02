@@ -1,13 +1,46 @@
 <?php 
 session_start(); 
 require 'includes/database.php';
-$sql=
+
+// ログインしている場合の処理
+// if (isset($_SESSION['customer'])) {
+//   $session_id = session_id();
+   // 現在のセッションIDを取得
 
 
-$total=0;
-$subtotal=$product['price']*$purchase_detail['count'];
+  // p→productテーブル、pd→purchase_detailテーブル、pur→purchaseテーブル
+  // WHEREの後は現在のセッション ID と一致するか
+//   $sql = "
+//     SELECT p.id, p.name, p.price, p.description, pd.count
+//     FROM purchase_detail pd
+//     JOIN product p ON pd.product_id = p.id
+//     JOIN purchase pur ON pd.purchase_id = pur.id
+//     WHERE pur.session_id = :session_id
+//     ";
 
 
+// $total=0;
+
+// }
+
+// 商品IDを指定（仮にID 1の商品の場合）
+$product_id = 1;
+
+// 商品データをデータベースから取得
+$sql = "SELECT id, name, price, description FROM product WHERE id = :id";
+$stmt = $pdo->prepare($sql);
+$stmt->bindParam(':id', $product_id, PDO::PARAM_INT);
+$stmt->execute();
+$product = $stmt->fetch(PDO::FETCH_ASSOC);
+
+// もし商品が見つかったら、カートに追加する
+if ($product) {
+    // 仮に数量1でカートに追加
+    $product['count'] = 1;
+    
+    // $_SESSION['product']に商品を追加（同じIDの商品があれば上書き）
+    $_SESSION['product'][$product['id']] = $product;
+}
 
 
 
@@ -35,31 +68,24 @@ require 'includes/header.php';
       <div class="merchandise_area">
         <img src="" alt="商品画像" class="merchandise_image">
         <p class=merchandise_name><?= $product['name']?></p>
-        <p class="price"><?= $product['price']?></p>
-        <p class="count">数量&emsp;<?= $purchase_detail['count']?>個</p>
-        <p class="delete"><a href="cart-delete.php">削除する</a></p>
+        <p class="price">税込&#12288;&#165;<?= $product['price']?></p>
+        <p class="count">数量&#12288;<?= $purchase_detail['count']?>個</p>
+        <form action="cart-delete.php" method="post" class="delete"><a href="cart-delete.php">削除する</a></form>
       </div>
     <?php endforeach; ?>
+
+      <div class="confirm_window">
+        <p>ご注文合計：<span class="price">税込￥5,000</span></p>
+        <input type="submit" value="ご購入確認へ進む" class="shopping_confirm">
+      </div>
+
   <?php else: ?>
     <div class="merchandise_area">
       <p>カートに商品がありません。</p>
     </div>
   <?php endif; ?>
 
-
-  <img src="common/images/cc-donut.jpg" alt="CCドーナツイメージ" class="donuts_image">
-
-  <p class="merchandise">CCドーナツ 当店オリジナル（5個入り）
-  </p>
-  <p >税込 ￥1,500</p>
-
-  <p class="num">数量　1個</p>
-
-
-  <div class="confirm_window">
-    <p>ご注文合計：<span class="price">税込￥5,000</span></p>
-    <input type="submit" value="ご購入確認へ進む" class="shopping_confirm">
-  </div>
+  
 
   <div>
     <input type="submit" value="買い物を続ける" class="continue">
