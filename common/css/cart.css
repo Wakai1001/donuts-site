@@ -1,43 +1,60 @@
 @charset "utf-8";
 
-.breadcrumbs {
-  text-align: left;
-}
-
 body {
-  text-align: center;
   margin: 0 auto;
   font-size: 16px;
 }
 
-p {
+.breadcrumbs {
+  text-align: left;
+}
+
+.guest_name_area {
+  padding: 12px 20px;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+/* 商品の枠 */
+.merchandise_area {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 商品画像 */
+.merchandise_image {
+  width: 90vw;
+  margin-bottom: 20px;
   text-align: center;
 }
 
-.merchandise {
+
+/* 商品名 */
+.merchandise_name {
   color: #7F5539;
   font-weight: bold;
-  font-family: "Noto Sans";
   margin-bottom: 16px;
 }
 
+/* 商品の値段 */
 .price {
   color: #BF0000;
   font-size: 16px;
   margin-bottom: 20px;
 }
 
+/* 商品の個数 */
 .num {
   color: #333;
 }
 
+
 .delete {
   color: #7F5539;
-}
-
-.donuts_image {
-  width: 90vw;
-  margin-bottom: 20px;
 }
 
 .confirm_window {
@@ -63,4 +80,12 @@ p {
   border: 1px solid #7F5539;
   background-color: #7F5539;
   color: #fff;
+}
+
+@media screen and (min-width:768px) {
+  .guest_name_area {
+    margin: 0 auto;
+    width: 1200px;
+    max-width: 100%;
+  }
 }
