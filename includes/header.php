@@ -95,6 +95,7 @@ echo '</title>';
   <header>
 
     <div class="header_inner">
+      
       <nav class="header_nav">
           <!-- ハンバーガーメニュー↓ -->
         <button id="hamburger_menu">
@@ -103,13 +104,27 @@ echo '</title>';
             <span class="nav_icon_bottom"></span>
          </button>
           <!-- ドロワーメニュー↓ -->
-          <ul class="nav_menu">
-            <li><a href="">top</a></li>
-            <li><a href="">商品一覧</a></li>
-            <li><a href="">よくある質問</a></li>
-            <li><a href="">問い合わせ</a></li>
-            <li><a href="">当サイトのポリシー</a></li>
-          </ul>
+
+          <div class="drawer_design">
+
+            <div class="drawer_inner_design">
+              <a href="index.php" class="drawer_logo">
+                <img src="common/images/logo.svg" alt="ロゴ画像">
+              </a>
+              <button class="drawer_close_button">
+                <img src="common/images/close-btn.png" alt="閉じるボタン">
+              </button>
+            </div>
+
+            <ul class="nav_menu">
+              <li><a href="">top</a></li>
+              <li><a href="">商品一覧</a></li>
+              <li><a href="">よくある質問</a></li>
+              <li><a href="">問い合わせ</a></li>
+              <li><a href="">当サイトのポリシー</a></li>
+            </ul>
+          </div>
+
       </nav>
 
       <h1>
