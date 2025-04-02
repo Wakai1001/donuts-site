@@ -37,8 +37,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  position: relative;
-  z-index: 30;
+  z-index: 10;
 }
 
 #hamburger_menu span {
@@ -53,6 +52,7 @@ header {
   background-color: #fff;
   transform: rotate(45deg);
   transform-origin: left;
+  opacity: 0;
 }
 
 #hamburger_menu .center_change {
@@ -63,27 +63,46 @@ header {
   background-color: #fff;
   transform: rotate(-45deg);
   transform-origin: left;
+  opacity: 0;
 }
 
 /* ハンバーガーメニュー↑ */
 
 /* ドロワーメニュー↓ */
-.nav_menu {
+.drawer_design {
   height: 100vh;
-  padding: 0 12px;
+  padding: 12px;
   width: 100%;
-  background-color: #7f5539;
+  background-color: rgba(127, 85, 57, 0.75);
   position: absolute;
   top: 0;
-  left: -100%;
+  left: -200%;
   z-index: 20;
-  transform: rotateY(180deg);
-  transition: 1s;
+  transition: all 500ms ease-in-out;
 }
 
-.nav_menu.drawer_open {
+.drawer_design.drawer_open {
   left: 0;
-  transform: rotateY(0deg);
+}
+
+.drawer_inner_design {
+  display: flex;
+  justify-content: space-between;
+}
+
+.drawer_logo img {
+  height: 52px;
+}
+
+.drawer_close_button {
+  height: 20px;
+  width: 24px;
+  background-color: transparent;
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 30;
 }
 
 .nav_menu li {
@@ -94,14 +113,6 @@ header {
   letter-spacing: 0;
   text-transform: uppercase;
   border-bottom: 1px solid #fff;
-}
-
-.nav_menu li:first-child {
-  margin-top: 123px;
-}
-
-.nav_menu li:last-child {
-  margin-bottom: 30px;
 }
 
 .nav_menu li a {
@@ -266,34 +277,27 @@ small {
   /* ハンバーガーメニュー↑ */
 
   /* ドロワーメニュー↓ */
-  #nav_menu {
-    display: none;
-
-    height: 100vh;
-    width: 40%;
-    background-color: #7f5539;
-    text-align: center;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 20;
+  .drawer_design {
+    width: 600px;
   }
 
-  #nav_menu li {
-    padding: 16px 12px;
+  .drawer_logo img {
+    height: 77.77px;
+  }
+
+  .drawer_close_button {
+    height: 53.93px;
+    width: 54px;
+    z-index: 30;
+  }
+
+  .nav_menu li {
+    padding: 20px 12px;
     color: #fff;
-    font-size: 16px;
+    font-size: 24px;
     line-height: 1;
     letter-spacing: 0;
     text-transform: uppercase;
-  }
-
-  #nav_menu li:first-child {
-    margin-top: 60px;
-  }
-
-  #nav_menu li:last-child {
-    margin-bottom: 30px;
   }
 
   /* ドロワーメニュー↑ */
@@ -339,8 +343,15 @@ small {
 
   /* 共通footer領域↓ */
   footer {
-    padding: 12px 95px;
     height: 450px;
+    padding: 12px 0 0;
+  }
+
+  .footer_design {
+    margin: 0 auto;
+    padding: 0 12px;
+    width: 1200px;
+    max-width: 100%;
   }
 
   #footer_nav {
@@ -382,9 +393,4 @@ small {
     margin-top: 40px;
     font-size: 12px;
   }
-
-
-
-
-
 }

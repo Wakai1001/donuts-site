@@ -2,6 +2,7 @@
 
 <main>
   <p class="guest_name_area">ようこそ&#12288;ゲスト様</p>
+  <hr>
 
   <h2 class="login_now">ログイン</h2>
 

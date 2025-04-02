@@ -21,6 +21,7 @@ require 'includes/header.php'
  
 <?php if(isset($_SESSION['customer'])): ?>
   <p class="guest_name_area">ようこそ&#12288; <?= htmlspecialchars($_SESSION['customer']['name']) ?> 様</p>
+  <hr>
   <h2 class="login_now">ログイン完了</h2>
   <div id="login_area">
     <p>ログインが完了しました。</p>
