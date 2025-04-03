@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+/* header  */
+header {
+  background: #fff;
+  height: 102px;
+}
+
+.header_inner {
+  padding: 0;
+  display: block;
+  height: 100%;
+}
+
+.header_nav {
+  display: none;
+}
+
+.login_nav {
+  display: none;
+}
+
+.search_design {
+  display: none;
+}
+
+h1 {
+  top: 3%;
+  left: 13%;
+}
+
+/* design */
+main {
+  color: #7F5539;
+  max-width: 270px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 75vh;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.box {
+  display: block;
+  border: #E8C2CA solid 1px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.complete {
+  color: #333;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+.error {
+  font-size: 12px;
+  color: #BF0000;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.login {
+  font-size: 12px;
+  color: #7F5539;
+  text-decoration: underline #7F5539;
+  margin-bottom: 20px;
+  text-align: center;
+}
