@@ -2,7 +2,6 @@
 
 body {
   margin: 0 auto;
-  font-size: 16px;
 }
 
 .breadcrumbs {
@@ -18,6 +17,7 @@ body {
 
 /* 商品の枠 */
 .merchandise_area {
+  height: 471.5px;
   margin: 20px;
   display: flex;
   flex-direction: column;
@@ -35,26 +35,40 @@ body {
 
 /* 商品名 */
 .merchandise_name {
-  color: #7F5539;
-  font-weight: bold;
-  margin-bottom: 16px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
+  margin-bottom: 20px;
 }
 
 /* 商品の値段 */
 .price {
   color: #BF0000;
   font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
   margin-bottom: 20px;
 }
 
 /* 商品の個数 */
-.num {
+.count {
   color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
 }
 
-
+/* 削除する */
 .delete {
+  padding-bottom: 4px;
   color: #7F5539;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0;
+  border-bottom: 0.5px solid #7F5539;
 }
 
 .confirm_window {
@@ -74,9 +88,16 @@ body {
   margin-bottom: 30px;
 }
 
+.product_return {
+  text-align: center;
+}
+
 .continue {
-  width: 42.6vw;
-  height: 36px;
+  margin: 40px 0 80px;
+  padding: 12px 38px;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
   border: 1px solid #7F5539;
   background-color: #7F5539;
   color: #fff;
