@@ -25,10 +25,9 @@ header {
 }
 
 h1 {
-  left: 13%;
   top: 3%;
+  left: 13%;
 }
-
 
 /* design */
 main {
@@ -43,7 +42,11 @@ h2 {
   line-height: 1;
   letter-spacing: 0;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 52px;
+}
+
+div {
+  margin-bottom: 20px;
 }
 
 .title {
@@ -53,42 +56,43 @@ h2 {
   margin-bottom: 8px;
 }
 
-.require {
-  color: #BF0000;
-}
-
-.match {
-  font-size: 8px;
-  color: #BF0000;
-  margin-bottom: 8px;
-  margin-top: 8px;
-}
-
-input[type=text],
-input[type=password] {
-  border: #7F5539 1px solid;
-  width: 295px;
+.confirm {
+  border-left: 1px solid #7F5539;
+  font-size: 12px;
+  color: #333;
+  padding-left: 4px;
   height: 20px;
 }
 
-input[type=text] {
-  margin-bottom: 20px;
+.expiry {
+  margin: 0;
+  display: flex;
 }
 
-input[type=password] {
-  margin-bottom: 40px;
+.expiry input[type=text] {
+  width: 7%;
+}
+
+.expiry input[type=text]:last-of-type {
+  border: transparent;
+  width: 15%;
 }
 
 input[type=submit] {
   background-color: #7F5539;
   color: #fff;
-  padding: 16px 20px;
+  padding: 16px 28px;
   font-size: 16px;
   line-height: 1;
   letter-spacing: 0;
   margin-left: 15%;
+  margin-bottom: 5px;
+  margin-top: 40px;
 }
 
-form {
+.back {
+  font-size: 12px;
+  text-align: center;
   margin-bottom: 80px;
+  text-decoration: underline #7F5539;
 }
