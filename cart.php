@@ -2,48 +2,71 @@
 session_start(); 
 require 'includes/database.php';
 
-// 合計金額の初期化
-$total = 0;
-$cart_items = [];
 
+//カートのデータを入れるための空の配列
+$cartItems = [];
+
+
+// ログインしているユーザーの場合
 if (isset($_SESSION['user_id'])) {
-  //  ログインしているユーザーのIDを代入
-    $user_id = $_SESSION['user_id'];
 
+  //ログインしているユーザーのIDをバインド変数に代入
+    $customerId = $_SESSION['user_id'];
+
+  // 商品番号、商品名、価格、購入個数を取得する  
+  // 各テーブルを内部結合（INNER JOIN）してデータを統合する  
+  // `purchase.customer_id` とプレースホルダー `:customerId` が一致するデータを取得する 
     $sql = "
-        SELECT product.id, product.name, product.price, product.description, purchase_detail.count
+        SELECT product.id, product.name, product.price, purchase_detail.count
         FROM purchase_detail
-        JOIN product ON purchase_detail.product_id = product.id
-        JOIN purchase ON purchase_detail.purchase_id = purchase.id
-        WHERE purchase.user_id = :user_id;
+        INNER JOIN product ON purchase_detail.product_id = product.id
+        INNER JOIN purchase ON purchase_detail.purchase_id = purchase.id
+        WHERE purchase.customer_id = :customerId;
     ";
     
+    // SQLのSELECT文をprepare()でデータベース側で解析・最適化し、PDOStatementオブジェクトとして変数に代入する
     $stmt = $pdo->prepare($sql);
-    $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+
+    // プレスホルダー':customerId'に変数$customerIdの値をバインドする
+    // purchase.customer_idは顧客番号は数値を想定しているので、データ型を PDO::PARAM_INT（整数）として指定する
+    $stmt->bindParam(':customerId', $customerId, PDO::PARAM_INT);
+    
+    // 準備した $stmtを実行する
     $stmt->execute();
-    $cart_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    // 実行したSQLの結果を fetchAll(PDO::FETCH_ASSOC) で取得し、カートのデータをカラム名をキーとする連想配列として $cartItems に代入する
+    $cartItems = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    // ログインしていないゲストユーザーの場合
 } else {
-    // **ゲストユーザーの場合**
+    
+  // カートに中身が入ってる場合
     if (!empty($_SESSION['cart'])) {
-        foreach ($_SESSION['cart'] as $product_id => $item) {
-            $cart_items[] = [
-                'id' => $product_id,
+
+        // 配列 $_SESSION['cart'] の中身をループで取り出す
+        // $productIdに商品番号、$itemに商品の名前、価格、個数を代入する
+        foreach ($_SESSION['cart'] as $productId => $item) {
+            $cartItems[] = [
+                'id' => $productId,
                 'name' => $item['name'],
                 'price' => $item['price'],
-                'description' => $item['description'],
                 'count' => $item['count'],
             ];
         }
     }
 }
 
-// **合計金額を計算**
-foreach ($cart_items as $item) {
+//合計金額の初期化
+$total = 0;
+
+// 合計金額の計算
+// カート内の商品をループで処理し、価格 × 個数を合計に加算する
+foreach ($cartItems as $item) {
     $total += $item['price'] * $item['count'];
 }
+
 require 'includes/header.php';
 ?>
-
 
 
 
