@@ -1,6 +1,16 @@
+  <?php 
+  session_start(); 
+  require 'includes/header.php'
+  ?>
 
-  <?php require 'includes/header.php' ?>
-  <p class="guest">ようこそ　　ゲスト様</p>
+<main>
+
+<?php if(isset($_SESSION['customer'])): ?>
+  <p class="guest_name_area">ようこそ&#12288; <?= htmlspecialchars($_SESSION['customer']['name']) ?> 様</p>
+<?php else: ?>
+  <p class="guest_name_area">ようこそ&#12288;ゲスト様</p>
+<?php endif; ?>
+
   <img src="common/images/hero-sp.jpg" alt="main visual" class="hero_sp">
   <div class="content1">
     <div class="forseal_container">
@@ -38,7 +48,7 @@
           <p class="list_price">税込　¥1,500</p>
           <img src="common/images/favorite.png" alt="ハートマーク" class="heart-mark">
         </div>
-        <div class="in_cart">カートに入れる</div>
+        <form action="cart-input.php" method="post" class="in_cart"><input type="submit" value="カートに入れる"></input></form>
       </div>
 
       <div class="rank_container2">
@@ -101,9 +111,5 @@
     </div>
   </div>
   </section>
-
+</main>
   <?php require 'includes/footer.php' ?>
-</body>
-
-</html>
-

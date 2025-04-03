@@ -1,5 +1,18 @@
+<?php 
 
-<?php require 'includes/header.php' ?>
+// セッションが開始されていなかったらセッションを開始する
+if (session_status() === PHP_SESSION_NONE) {
+  session_start();
+}
+
+// セッションを空にする
+$_SESSION = array();
+
+// セッションを破棄する
+session_destroy(); 
+
+require 'includes/header.php'
+?>
 
 <main>
 

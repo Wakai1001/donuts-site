@@ -103,8 +103,8 @@ echo '</title>';
             <span class="nav_icon_center"></span>
             <span class="nav_icon_bottom"></span>
          </button>
-          <!-- ドロワーメニュー↓ -->
 
+          <!-- ドロワーメニュー↓ -->
           <div class="drawer_design">
 
             <div class="drawer_inner_design">

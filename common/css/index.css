@@ -1,12 +1,15 @@
 @charset "utf-8";
 
 body {
-  font-family: 'Noto Sans JP', sans-serif;
-}
-
-body {
   max-width: 100%;
   margin: 0 auto;
+}
+
+.guest_name_area {
+  padding: 12px 20px;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
 }
 
 /* vwに直すのもあり */
@@ -239,8 +242,9 @@ h2 {
   line-height: 1;
   color: #bf0000;
   display: inline-block;
-  
-  margin-right: 8vw;  /*spacebetween効かないから適当に入れた*/
+
+  margin-right: 8vw;
+  /*spacebetween効かないから適当に入れた*/
 }
 
 .heart-mark {
@@ -307,5 +311,11 @@ h2 {
 @media screen and (min-width: 768px) {
   body {
     max-width: 1200px;
+  }
+
+  .guest_name_area {
+    margin: 0 auto;
+    width: 1200px;
+    max-width: 100%;
   }
 }
