@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+.card_confirm {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  min-height: 48px;
+}
+
+.element {
+  margin: 40px auto 60px;
+  justify-items: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.h2 {
+  font-size: 20px;
+  font-family: 'Noto sans';
+  font-weight: bold;
+  color: #7F5539;
+  margin-bottom: 60px;
+}
+
+ul {
+  width: 53.3vw;
+  font-size: 12px;
+}
+
+li {
+  margin-bottom: 20px;
+  line-height: 2.0;
+  width: 295px;
+  justify-items: start;
+  position: relative;
+  left: 30px;
+}
+
+.confirm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto 80px;
+  font-size: 16px;
+  font-family: 'Noto Sans JP';
+  color: #fff;
+  background: #7F5539;
+  width: 200px;
+  height: 48px;
+}

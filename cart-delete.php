@@ -10,6 +10,7 @@
 
 <body>
   <p class="breadcrumbs"><a href="index.php">TOP</a> &gt; カート</p>
+  <p class="welcome">ようこそ&emsp;ドーナツ太郎様</p>
 
   <p class="cart_input">カートから商品を削除しました。
   </p>
