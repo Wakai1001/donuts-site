@@ -2,48 +2,45 @@
 session_start(); 
 require 'includes/database.php';
 
-// ログインしている場合の処理
-// if (isset($_SESSION['customer'])) {
-//   $session_id = session_id();
-   // 現在のセッションIDを取得
+// 合計金額の初期化
+$total = 0;
+$cart_items = [];
 
+if (isset($_SESSION['user_id'])) {
+  //  ログインしているユーザーのIDを代入
+    $user_id = $_SESSION['user_id'];
 
-  // p→productテーブル、pd→purchase_detailテーブル、pur→purchaseテーブル
-  // WHEREの後は現在のセッション ID と一致するか
-//   $sql = "
-//     SELECT p.id, p.name, p.price, p.description, pd.count
-//     FROM purchase_detail pd
-//     JOIN product p ON pd.product_id = p.id
-//     JOIN purchase pur ON pd.purchase_id = pur.id
-//     WHERE pur.session_id = :session_id
-//     ";
-
-
-// $total=0;
-
-// }
-
-// 商品IDを指定（仮にID 1の商品の場合）
-$product_id = 1;
-
-// 商品データをデータベースから取得
-$sql = "SELECT id, name, price, description FROM product WHERE id = :id";
-$stmt = $pdo->prepare($sql);
-$stmt->bindParam(':id', $product_id, PDO::PARAM_INT);
-$stmt->execute();
-$product = $stmt->fetch(PDO::FETCH_ASSOC);
-
-// もし商品が見つかったら、カートに追加する
-if ($product) {
-    // 仮に数量1でカートに追加
-    $product['count'] = 1;
+    $sql = "
+        SELECT product.id, product.name, product.price, product.description, purchase_detail.count
+        FROM purchase_detail
+        JOIN product ON purchase_detail.product_id = product.id
+        JOIN purchase ON purchase_detail.purchase_id = purchase.id
+        WHERE purchase.user_id = :user_id;
+    ";
     
-    // $_SESSION['product']に商品を追加（同じIDの商品があれば上書き）
-    $_SESSION['product'][$product['id']] = $product;
+    $stmt = $pdo->prepare($sql);
+    $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+    $stmt->execute();
+    $cart_items = $stmt->fetchAll(PDO::FETCH_ASSOC);
+} else {
+    // **ゲストユーザーの場合**
+    if (!empty($_SESSION['cart'])) {
+        foreach ($_SESSION['cart'] as $product_id => $item) {
+            $cart_items[] = [
+                'id' => $product_id,
+                'name' => $item['name'],
+                'price' => $item['price'],
+                'description' => $item['description'],
+                'count' => $item['count'],
+            ];
+        }
+    }
 }
 
-
-
+// **合計金額を計算**
+foreach ($cart_items as $item) {
+    $total += $item['price'] * $item['count'];
+}
 require 'includes/header.php';
 ?>
 
@@ -74,10 +71,10 @@ require 'includes/header.php';
       </div>
     <?php endforeach; ?>
 
-      <div class="confirm_window">
-        <p>ご注文合計：<span class="price">税込￥5,000</span></p>
+    <div class="confirm_window">
+        <p>ご注文合計：<span class="price">税込&#12288;￥<?= number_format($total) ?></span></p>
         <input type="submit" value="ご購入確認へ進む" class="shopping_confirm">
-      </div>
+    </div>
 
   <?php else: ?>
     <div class="merchandise_area">
@@ -85,11 +82,9 @@ require 'includes/header.php';
     </div>
   <?php endif; ?>
 
-  
-
-  <div>
+  <form action="product.php" method="post" class="product_return">
     <input type="submit" value="買い物を続ける" class="continue">
-  </div>
+  </form>
  
 </main>
 

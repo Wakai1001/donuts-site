@@ -17,6 +17,7 @@ body {
 
 /* 商品の枠 */
 .merchandise_area {
+  height: 471.5px;
   margin: 20px;
   display: flex;
   flex-direction: column;
@@ -87,9 +88,16 @@ body {
   margin-bottom: 30px;
 }
 
+.product_return {
+  text-align: center;
+}
+
 .continue {
-  width: 42.6vw;
-  height: 36px;
+  margin: 40px 0 80px;
+  padding: 12px 38px;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
   border: 1px solid #7F5539;
   background-color: #7F5539;
   color: #fff;
