@@ -4,6 +4,7 @@ require 'includes/database.php';
 
 
 
+
 // 商品IDを取得
 $productId = $_POST['product_id'] ?? null;
 
