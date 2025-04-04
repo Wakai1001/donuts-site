@@ -1,30 +1,157 @@
 @charset "utf-8";
 
-body {}
-
-/* 商品一覧 */
-h2 {
-  width: 30vw;
-  /* width: 152px; */
-  /* margin: auto; */
-  /* 絶対ずれるから気を付けて */
-  margin-left: 30vw;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 20px;
-  line-height: 1;
-  font-weight: bold;
-  color: black;
-  padding-bottom: 6px;
-  /* display: inline-block;  */
-  color: black;
-  border-bottom: 4px solid #ffd233;
+body {
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 
 
+/* 商品一覧 */
+main {
+  max-width: 90vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* タイトル　商品一覧 */
+h2 {
+  width: 152px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 32px;
+
+  font-size: 20px;
+  line-height: 1;
+  padding-bottom: 6px;
+  /* display: inline-block;  */
+  color: #333;
+  border-bottom: 4px solid #ffd233;
+}
+
+/* タイトル　バラエティセット */
+h3 {
+  width: 152px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-bottom: 40px;
+
+  font-size: 16px;
+  line-height: 1;
+  padding-bottom: 6px;
+  color: #7F5539;
+  border-bottom: 4px solid #ffd233;
+}
+
+/* 縦、左側の列のそれぞれの箱 */
+/* ※画像～カートに入れるまでのところ */
+.product_container {
+  /* margin: 72px 10px 80px 20px; */
+  display: flex;
+  flex-direction: column;
+  /* 縦方向に並べる */
+  align-items: center;
+  /* 中央揃えにしておくと綺麗 */
+  justify-content: space-around;
+}
+
+
+/* 縦、右側の列のそれぞれの箱 */
+/* ※画像～カートに入れるまでのところ */
+.product_container2 {
+  /* margin: 72px 10px 80px; */
+  display: flex;
+  flex-direction: column;
+  /* 縦方向に並べる */
+  align-items: center;
+  /* 中央揃えにしておくと綺麗 */
+  justify-content: space-around;
+}
+
+.donuts_image {
+  width: 158px;
+  height: 158px;
+
+}
+
+
+.list_text {
+  font-weight: medium;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #7f5539;
+  margin: 22px 0;
+
+  width: 158px;
+}
+
+
+.price-container {
+  display: flex;
+  /* インライン要素でも使えるフレックス */
+  align-items: center;
+  /* 縦方向の中央揃え */
+  /* width: 100%; */
+  justify-content: space-between;
+}
+
+
+.list_price {
+  font-size: 16px;
+  line-height: 1;
+  color: #bf0000;
+  display: inline-block;
+
+  margin-right: 8vw;
+  /*spacebetween効かないから適当に入れた*/
+}
+
+/* ハートマーク */
+.heart_mark {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+}
+
+/* カートに入れる */
+.in_cart {
+  width: 158px;
+  height: 36px;
+  font-size: 12px;
+  line-height: 1;
+  color: #ffffff;
+  background-color: #7f5539;
+  display: inline-flex;
+  /* インラインで使えて中央揃えもOK */
+  justify-content: center;
+  /* 横方向の中央揃え */
+  align-items: center;
+  margin-top: 22.3px;
+  margin-bottom: 80px;
+}
+
+
+/* （仮）カートに入れる */
+/* .submitBtn {
+  text-align: center;
+}
+
+input[type="submit"] {
+  background: #121212;
+  color: #fff;
+  padding: 18px 18px;
+} */
+/* ↑（仮）カートに入れる */
 
 
 
 /* バラエティセット */
+.container-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
