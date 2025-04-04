@@ -1,46 +1,118 @@
 @charset "utf-8";
 
-li {
+/* header  */
+header {
+  background: #fff;
+  height: 102px;
+}
+
+.header_inner {
+  padding: 0;
+  display: block;
+  height: 100%;
+}
+
+.header_nav {
+  display: none;
+}
+
+.login_nav {
+  display: none;
+}
+
+.search_design {
+  display: none;
+}
+
+h1 {
+  top: 3%;
+  left: 13%;
+}
+
+/* design */
+main {
+  color: #7F5539;
+  max-width: 280px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+form {
+  margin-bottom: 80px;
+  font-size: 12px;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0;
   text-align: center;
-  font-family: sans-serif;
+  margin-bottom: 60px;
 }
 
-.card_registration {
-  margin: 0 auto;
-  width: 79vw;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
+p {
+  line-height: 1;
+  letter-spacing: 0;
+  color: #7F5539;
+  margin-bottom: 8px;
 }
 
-.user_name {
-  border: 1px solid black;
+.card_item {
+  margin-bottom: 20px;
 }
 
-/* .card_input {
-  font-size: 20px;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto 52px;
-} */
+.card_item:last-of-type {
+  margin-bottom: 40px;
+}
 
-.h2 {
-  font-size: 20px;
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  margin: 0 auto 52px;
+.title {
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #7F5539;
+  margin-bottom: 8px;
+}
+
+label {
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #7F5539;
+  margin-right: 30px;
 }
 
 .require {
-  color: red;
+  color: #bf0000;
 }
 
-.confirm {
-  display: flex;
+input[type=text] {
+  border: #7F5539 1px solid;
+  width: 100%;
+  height: 20px;
+  padding-left: 3px;
+}
+
+input[type=number] {
+  border: #7F5539 1px solid;
+  width: 20%;
+  margin-right: 10px;
+  height: 20px;
+  padding-left: 3px;
+}
+
+input[type=password] {
+  border: #7F5539 1px solid;
+  width: 20%;
+  height: 20px;
+  padding-left: 3px;
+}
+
+input[type=submit] {
+  background-color: #7F5539;
   color: #fff;
-  background: #7F5539;
-  width: 200px;
-  height: 48px;
+  padding: 16px 20px;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
+  margin-left: 15%;
 }

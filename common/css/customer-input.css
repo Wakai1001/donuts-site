@@ -25,8 +25,8 @@ header {
 }
 
 h1 {
-  left: 12%;
-  top: 15%;
+  left: 13%;
+  top: 3%;
 }
 
 
@@ -53,7 +53,7 @@ h2 {
   margin-bottom: 8px;
 }
 
-.caution {
+.require {
   color: #BF0000;
 }
 
@@ -64,21 +64,6 @@ h2 {
   margin-top: 8px;
 }
 
-tr {
-  height: 40px;
-  margin-bottom: 20px;
-  display: block;
-}
-
-tr:last-of-type {
-  height: 56px;
-}
-
-td {
-  display: block;
-
-}
-
 input[type=text],
 input[type=password] {
   border: #7F5539 1px solid;
@@ -86,9 +71,12 @@ input[type=password] {
   height: 20px;
 }
 
-
-table {
+input[type=text] {
   margin-bottom: 20px;
+}
+
+input[type=password] {
+  margin-bottom: 40px;
 }
 
 input[type=submit] {
