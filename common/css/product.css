@@ -14,46 +14,40 @@ main {
 
 /* タイトル　商品一覧 */
 h2 {
-  width: 152px;
+  font-size: 20px;
+  line-height: 1;
+  padding-bottom: 8px;
+  color: #333;
+
+  /* 黄色下線 */
+  width: 100px;
+  border-bottom: 4px solid #ffd233;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   margin-bottom: 40px;
   margin-top: 32px;
-
-  font-size: 20px;
-  line-height: 1;
-  padding-bottom: 6px;
-  /* display: inline-block;  */
-  color: #333;
-  border-bottom: 4px solid #ffd233;
 }
 
 /* タイトル　バラエティセット */
 h3 {
-  width: 152px;
+  font-size: 16px;
+  line-height: 1;
+  padding-bottom: 8px;
+  color: #7F5539;
+
+  /* 黄色下線 */
+  width: 160px;
+  border-bottom: 4px solid #ffd233;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   margin-bottom: 40px;
-
-  font-size: 16px;
-  line-height: 1;
-  padding-bottom: 6px;
-  color: #7F5539;
-  border-bottom: 4px solid #ffd233;
 }
 
 /* 縦、左側の列のそれぞれの箱 */
 /* ※画像～カートに入れるまでのところ */
 .product_container {
-  /* margin: 72px 10px 80px 20px; */
-  display: flex;
-  flex-direction: column;
-  /* 縦方向に並べる */
-  align-items: center;
-  /* 中央揃えにしておくと綺麗 */
-  justify-content: space-around;
   margin-bottom: 80px;
 }
 
@@ -61,21 +55,16 @@ h3 {
 /* 縦、右側の列のそれぞれの箱 */
 /* ※画像～カートに入れるまでのところ */
 .product_container2 {
-  /* margin: 72px 10px 80px; */
-  display: flex;
-  flex-direction: column;
-  /* 縦方向に並べる */
-  align-items: center;
-  /* 中央揃えにしておくと綺麗 */
-  justify-content: space-around;
   margin-bottom: 80px;
 }
 
+/* SP版ドーナツ画像 */
 .donuts_image {
   width: 158px;
   height: 158px;
 }
 
+/* 商品名 */
 .list_text {
   font-weight: medium;
   font-size: 16px;
@@ -85,23 +74,22 @@ h3 {
   width: 158px;
 }
 
+/* 商品金額の税込み～ハートまでの箱 */
 .price-container {
   display: flex;
   /* インライン要素でも使えるフレックス */
   align-items: center;
   /* 縦方向の中央揃え */
-  /* width: 100%; */
   justify-content: space-between;
 }
 
+/* 商品金額 */
 .list_price {
   font-size: 16px;
   line-height: 1;
   color: #bf0000;
   display: inline-block;
-
   margin-right: 8vw;
-  /*spacebetween効かないから適当に入れた*/
 }
 
 /* ハートマーク */
