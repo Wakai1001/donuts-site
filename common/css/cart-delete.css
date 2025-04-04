@@ -4,21 +4,17 @@
   text-align: left;
 }
 
-body {
-  text-align: center;
-  margin: 0 auto;
-  font-size: 16px;
-}
-
-p {
-  text-align: center;
+.guest_name_area {
+  padding: 12px 20px;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
 }
 
 .cart_input {
+  padding: 24px 20px;
+  font-size: 12px;
   color: #333;
-  margin-top: 24px;
-  margin-bottom: 24px;
-  text-align: left;
 }
 
 .merchandise {
@@ -72,4 +68,14 @@ p {
   background-color: #7F5539;
   color: #fff;
   margin-bottom: 100px;
+}
+
+.shopping_btn {
+  padding: 12px 38px;
+  margin: 40px auto 100px;
+  width: 160px;
+  color: #fff;
+  background-color: #7F5539;
+  font-size: 12px;
+  text-align: center;
 }
