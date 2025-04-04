@@ -117,7 +117,7 @@ echo '</title>';
             </div>
 
             <ul class="nav_menu">
-              <li><a href="">top</a></li>
+              <li><a href="index.php">top</a></li>
               <li><a href="">商品一覧</a></li>
               <li><a href="">よくある質問</a></li>
               <li><a href="">問い合わせ</a></li>
