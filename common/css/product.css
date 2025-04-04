@@ -5,8 +5,6 @@ body {
   margin: 0 auto;
 }
 
-
-
 /* 商品一覧 */
 main {
   max-width: 90vw;
@@ -56,6 +54,7 @@ h3 {
   align-items: center;
   /* 中央揃えにしておくと綺麗 */
   justify-content: space-around;
+  margin-bottom: 80px;
 }
 
 
@@ -69,14 +68,13 @@ h3 {
   align-items: center;
   /* 中央揃えにしておくと綺麗 */
   justify-content: space-around;
+  margin-bottom: 80px;
 }
 
 .donuts_image {
   width: 158px;
   height: 158px;
-
 }
-
 
 .list_text {
   font-weight: medium;
@@ -84,10 +82,8 @@ h3 {
   line-height: 1.6;
   color: #7f5539;
   margin: 22px 0;
-
   width: 158px;
 }
-
 
 .price-container {
   display: flex;
@@ -97,7 +93,6 @@ h3 {
   /* width: 100%; */
   justify-content: space-between;
 }
-
 
 .list_price {
   font-size: 16px;
@@ -116,42 +111,31 @@ h3 {
   display: inline-block;
 }
 
-/* カートに入れる */
-.in_cart {
-  width: 158px;
-  height: 36px;
-  font-size: 12px;
-  line-height: 1;
-  color: #ffffff;
-  background-color: #7f5539;
-  display: inline-flex;
-  /* インラインで使えて中央揃えもOK */
-  justify-content: center;
-  /* 横方向の中央揃え */
-  align-items: center;
-  margin-top: 22.3px;
-  margin-bottom: 80px;
-}
-
-
-/* （仮）カートに入れる */
-/* .submitBtn {
+/* カートに入れる  */
+/* <!-- ↓10章ｐ152　cssは183　sendボタン --> */
+.submitBtn {
   text-align: center;
 }
 
 input[type="submit"] {
-  background: #121212;
+  width: 158px;
+  height: 36px;
+  font-size: 12px;
+  line-height: 1;
   color: #fff;
-  padding: 18px 18px;
-} */
-/* ↑（仮）カートに入れる */
-
-
+  background: #7f5539;
+  margin-top: 22px;
+}
 
 /* バラエティセット */
 .container-wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
 
+@media screen and (min-width:768px) {
+  body {
+    max-width: 1200px;
+  }
 }
