@@ -1,6 +1,7 @@
   <?php 
   session_start(); 
-  require 'includes/header.php'
+  require 'includes/database.php';
+  require 'includes/header.php';
   ?>
 
 <main>
@@ -48,7 +49,24 @@
           <p class="list_price">税込　¥1,500</p>
           <img src="common/images/favorite.png" alt="ハートマーク" class="heart-mark">
         </div>
-        <form action="cart-input.php" method="post" class="in_cart"><input type="submit" value="カートに入れる"></input></form>
+
+        <?php
+          $product = [
+            'id' => 1,
+            'name' => 'チョコドーナツ',
+            'price' => 1500
+          ];
+        ?>
+        <form action="cart-input.php" method="post" class="in_cart">
+          <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
+          <!-- ENT_QUOTES → シングルクォート（'）とダブルクォート（"）もエスケープしてXSS対策 -->
+          <!-- UTF-8 → 文字化けや誤動作を防ぐためにエンコーディングを明示 -->
+          <input type="hidden" name="name" value="<?= htmlspecialchars($product['name'], ENT_QUOTES, 'UTF-8') ?>">
+          <input type="hidden" name="price" value="<?= $product['price'] ?>">
+          <input type="hidden" name="count" value="1">
+          <input type="submit" value="カートに入れる">
+        </form>
+
       </div>
 
       <div class="rank_container2">
@@ -112,4 +130,4 @@
   </div>
   </section>
 </main>
-  <?php require 'includes/footer.php' ?>
+  <?php require 'includes/footer.php'; ?>
