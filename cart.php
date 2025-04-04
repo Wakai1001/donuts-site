@@ -40,7 +40,7 @@ if (isset($_SESSION['user_id'])) {
     // ログインしていないゲストユーザーの場合
 } else {
     
-  // カートに中身が入ってる場合
+    // カートに中身が入ってる場合
     if (!empty($_SESSION['cart'])) {
 
         // 配列 $_SESSION['cart'] の中身をループで取り出す
@@ -69,7 +69,6 @@ require 'includes/header.php';
 ?>
 
 
-
 <main>
   
   <p class="breadcrumbs">TOP &gt; カート</p>
@@ -83,7 +82,9 @@ require 'includes/header.php';
   <hr>
   <?php endif; ?>
 
+
   <?php if (!empty($_SESSION['product'])): ?>
+
     <?php foreach($_SESSION['product'] as $id=>$product): ?>
       <div class="merchandise_area">
         <img src="" alt="商品画像" class="merchandise_image">
@@ -100,9 +101,11 @@ require 'includes/header.php';
     </div>
 
   <?php else: ?>
+    
     <div class="merchandise_area">
       <p>カートに商品がありません。</p>
     </div>
+  
   <?php endif; ?>
 
   <form action="product.php" method="post" class="product_return">
@@ -110,5 +113,6 @@ require 'includes/header.php';
   </form>
  
 </main>
+
 
 <?php require 'includes/footer.php' ?>
