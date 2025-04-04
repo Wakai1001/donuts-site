@@ -40,7 +40,7 @@ if (isset($_SESSION['user_id'])) {
     // ログインしていないゲストユーザーの場合
 } else {
     
-  // カートに中身が入ってる場合
+    // カートに中身が入ってる場合
     if (!empty($_SESSION['cart'])) {
 
         // 配列 $_SESSION['cart'] の中身をループで取り出す
@@ -69,7 +69,6 @@ require 'includes/header.php';
 ?>
 
 
-
 <main>
   
   <p class="breadcrumbs">TOP &gt; カート</p>
@@ -83,14 +82,19 @@ require 'includes/header.php';
   <hr>
   <?php endif; ?>
 
-  <?php if (!empty($_SESSION['product'])): ?>
-    <?php foreach($_SESSION['product'] as $id=>$product): ?>
+
+  <?php if (!empty($cartItems)): ?>
+
+    <?php foreach ($cartItems as $item): ?>
       <div class="merchandise_area">
         <img src="" alt="商品画像" class="merchandise_image">
-        <p class=merchandise_name><?= $product['name']?></p>
-        <p class="price">税込&#12288;&#165;<?= $product['price']?></p>
-        <p class="count">数量&#12288;<?= $purchase_detail['count']?>個</p>
-        <form action="cart-delete.php" method="post" class="delete"><a href="cart-delete.php">削除する</a></form>
+        <p class="merchandise_name"><?= htmlspecialchars($item['name'], ENT_QUOTES, 'UTF-8') ?></p>
+        <p class="price">税込&nbsp;¥<?= number_format($item['price']) ?></p>
+        <p class="count">数量&nbsp;<?= $item['count'] ?>個</p>
+        <form action="cart-delete.php" method="post" class="delete">
+          <input type="hidden" name="product_id" value="<?= $item['id'] ?>">
+          <input type="submit" value="削除する">
+        </form>
       </div>
     <?php endforeach; ?>
 
@@ -100,9 +104,11 @@ require 'includes/header.php';
     </div>
 
   <?php else: ?>
+    
     <div class="merchandise_area">
       <p>カートに商品がありません。</p>
     </div>
+  
   <?php endif; ?>
 
   <form action="product.php" method="post" class="product_return">
@@ -110,5 +116,6 @@ require 'includes/header.php';
   </form>
  
 </main>
+
 
 <?php require 'includes/footer.php' ?>
