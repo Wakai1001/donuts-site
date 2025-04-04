@@ -1,83 +1,31 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="common/css/reset.css">
-  <!-- <link rel="stylesheet" href="common/css/card-confirm.css"> -->
-  <!-- <link rel="stylesheet" href="common/css/common.css"> -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <title>ご購入確認 | CC Donuts</title>
-</head>
-<body>
-  
-<?php require 'includes/header.php' ?>
-    <div class="container">
-        <!-- ヘッダー -->
-        <header>
-          <!-- <img src="images/logo.png" alt="CC Donuts" class="logo"> -->
-            <h1>ご購入確認</h1>
-        </header>
+<?php require 'includes/header.php'; ?>
+<?php
 
-        <!-- 購入商品一覧 -->
-        <div class="section">
-            <h2>ご購入商品</h2>
-            <?php
-            $products = [
-                ["name" => "CCドーナツ 当店オリジナル (5個入り)", "quantity" => 1, "price" => 1500],
-                ["name" => "フルーツドーナツセット（12個入り）", "quantity" => 1, "price" => 3500]
-            ];
-            $total = 0;
-            foreach ($products as $product) {
-                $subtotal = $product["price"] * $product["quantity"];
-                $total += $subtotal;
-                echo "
-                <div class='product'>
-                    <p class='label'>商品名</p>
-                    <p class='value'>{$product['name']}</p>
-                    <p class='label'>数量</p>
-                    <p class='value'>{$product['quantity']}個</p>
-                    <p class='label'>小計</p>
-                    <p class='value'>税込 ¥" . number_format($subtotal) . "</p>
-                    <hr>
-                </div>
-                ";
-            }
-            ?>
-            <div class="total">
-                <p class="label">合計</p>
-                <p class="value">税込 ¥<?php echo number_format($total); ?></p>
-            </div>
-        </div>
+// 変数定義
+$cardName=htmlspecialchars($_REQUEST['card_name']);
+$cardType=$_REQUEST['card_type'];
+$cardNo=htmlspecialchars($_REQUEST['card_no']);
+$cardMonth=htmlspecialchars($_REQUEST['card_month']);
+$cardYear=htmlspecialchars($_REQUEST['card_year']);
+$cardSecurityCode=htmlspecialchars($_REQUEST['card_security_code']);
 
-        <!-- お届け先 -->
-        <div class="section">
-            <h2>お届け先</h2>
-            <p class="label">お名前</p>
-            <p class="value">ドーナツ太郎</p>
-            <p class="label">住所</p>
-            <p class="value">千葉県〇〇市中央1-1-1</p>
-        </div>
-
-        <!-- お支払い方法 -->
-        <div class="section">
-            <h2>お支払い方法</h2>
-            <p class="label">お支払い</p>
-            <p class="value">クレジットカード</p>
-            <p class="label">カード種類</p>
-            <p class="value">Visa</p>
-            <p class="label">カード番号</p>
-            <p class="value">123456・・・・・・・・</p>
-        </div>
-
-        <!-- 購入ボタン -->
-        <div class="purchase-button">
-            <button>ご購入を確定する</button>
-        </div>
-
-       
-    </div>
-    <?php require 'includes/footer.php' ?>
-</body>
-</html>
+echo '<main>';
+echo '<h2>ご入力内容の確認</h2>';
+echo '<form method="post" action="card-complete.php">';
+echo '<div><p class=title>お名前</p>';
+echo '<input type="text" class="confirm" name="card_name" value="',$cardName,'" readonly></div>';
+echo '<div><p class=title>カード会社</p>';
+echo '<input type="text" class="confirm" name="card_type" value="',$cardType,'" readonly></div>';
+echo '<div><p class=title>カード番号</p>';
+echo '<input type="text" class="confirm" name="card_no" value="',$cardNo,'" readonly></div>';
+echo '<div><p class=title>有効期限</p>';
+echo '<div class="expiry">';
+echo '<input type="text" class="confirm" name="card_month" value="',$cardMonth,'" readonly>';
+echo '<p>/</p><input type="text" class="confirm" name="card_year" value="',$cardYear,'" readonly></div></div>';
+echo '<div><p class=title>セキュリティコード</p>';
+echo '<input type="password" class="confirm" name="card_security_code" value="',$cardSecurityCode,'" readonly></div>';
+echo '<input type="submit" value="この内容で登録する"></form>';
+echo '<p class=back><a href=card-input.php>戻る</a></p>';
+echo '</main>';
+?>
+<?php require 'includes/footer.php'; ?>

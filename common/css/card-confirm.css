@@ -1,71 +1,98 @@
-body {
-  font-family: 'Noto Sans JP', sans-serif;
-  color: #59342E;
-  background-color: #FDF9F5;
-  margin: 0;
-  padding: 20px;
-}
+@charset "utf-8";
 
-.container {
-  max-width: 600px;
-  margin: auto;
-  text-align: center;
-}
-
+/* header  */
 header {
+  background: #fff;
+  height: 102px;
+}
+
+.header_inner {
+  padding: 0;
+  display: block;
+  height: 100%;
+}
+
+.header_nav {
+  display: none;
+}
+
+.login_nav {
+  display: none;
+}
+
+.search_design {
+  display: none;
+}
+
+h1 {
+  top: 3%;
+  left: 13%;
+}
+
+/* design */
+main {
+  color: #7F5539;
+  max-width: 295px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+div {
   margin-bottom: 20px;
 }
 
-.logo {
-  width: 100px;
+.title {
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
+  margin-bottom: 8px;
 }
 
-h1, h2 {
-  margin: 10px 0;
-  font-weight: bold;
+.confirm {
+  border-left: 1px solid #7F5539;
+  font-size: 12px;
+  color: #333;
+  padding-left: 4px;
+  height: 20px;
 }
 
-.section {
-  margin: 20px 0;
-  padding: 15px;
-  border: 1px solid #D1B8A2;
-  border-radius: 8px;
-  background-color: #FFFFFF;
-}
-
-.product, .total {
+.expiry {
+  margin: 0;
   display: flex;
-  justify-content: space-between;
 }
 
-.label {
-  font-weight: bold;
-  margin-right: 5px;
+.expiry input[type=text] {
+  width: 7%;
 }
 
-.value {
-  text-align: right;
+.expiry input[type=text]:last-of-type {
+  border: transparent;
+  width: 15%;
 }
 
-hr {
-  border: 0;
-  border-top: 1px solid #D1B8A2;
-  margin: 10px 0;
+input[type=submit] {
+  background-color: #7F5539;
+  color: #fff;
+  padding: 16px 28px;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
+  margin-left: 15%;
+  margin-bottom: 5px;
+  margin-top: 40px;
 }
 
-.purchase-button {
-  margin: 20px 0;
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #59342E;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #40251E;
+.back {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 80px;
+  text-decoration: underline #7F5539;
 }
