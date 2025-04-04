@@ -78,6 +78,12 @@ div {
   width: 15%;
 }
 
+.button {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 input[type=submit] {
   background-color: #7F5539;
   color: #fff;
@@ -85,9 +91,7 @@ input[type=submit] {
   font-size: 16px;
   line-height: 1;
   letter-spacing: 0;
-  margin-left: 15%;
   margin-bottom: 5px;
-  margin-top: 40px;
 }
 
 .back {
@@ -95,4 +99,59 @@ input[type=submit] {
   text-align: center;
   margin-bottom: 80px;
   text-decoration: underline #7F5539;
+}
+
+@media screen and (min-width:768px) {
+  main {
+    max-width: 300px;
+  }
+
+  h2 {
+    font-size: 32px;
+    margin-bottom: 80px;
+  }
+
+  .title,
+  main p,
+  input[type=text],
+  input[type=password] {
+    font-size: 24px;
+  }
+
+  input[type=text],
+  input[type=password] {
+    height: 32px;
+  }
+
+
+  .item {
+    margin-bottom: 40px;
+  }
+
+  .item:last-of-type {
+    margin-bottom: 80px;
+  }
+
+  .expiry input[type=text] {
+    width: 13%;
+    padding-right: 5px;
+  }
+
+  .expiry input[type=text]:last-of-type {
+    width: 23%;
+  }
+
+  input[type=submit] {
+    padding: 20px 60px;
+    font-size: 20px;
+  }
+
+  .button {
+    width: 300px;
+  }
+
+  .back {
+    font-size: 16px;
+  }
+
 }
