@@ -83,15 +83,18 @@ require 'includes/header.php';
   <?php endif; ?>
 
 
-  <?php if (!empty($_SESSION['product'])): ?>
+  <?php if (!empty($cartItems)): ?>
 
-    <?php foreach($_SESSION['product'] as $id=>$product): ?>
+    <?php foreach ($cartItems as $item): ?>
       <div class="merchandise_area">
         <img src="" alt="商品画像" class="merchandise_image">
-        <p class=merchandise_name><?= $product['name']?></p>
-        <p class="price">税込&#12288;&#165;<?= $product['price']?></p>
-        <p class="count">数量&#12288;<?= $purchase_detail['count']?>個</p>
-        <form action="cart-delete.php" method="post" class="delete"><a href="cart-delete.php">削除する</a></form>
+        <p class="merchandise_name"><?= htmlspecialchars($item['name'], ENT_QUOTES, 'UTF-8') ?></p>
+        <p class="price">税込&nbsp;¥<?= number_format($item['price']) ?></p>
+        <p class="count">数量&nbsp;<?= $item['count'] ?>個</p>
+        <form action="cart-delete.php" method="post" class="delete">
+          <input type="hidden" name="product_id" value="<?= $item['id'] ?>">
+          <input type="submit" value="削除する">
+        </form>
       </div>
     <?php endforeach; ?>
 
