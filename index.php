@@ -24,12 +24,19 @@
       <p class="content_text2">ドーナツのある生活</p>
     </div>
   </div>
-  <div class="list_container">
-    <img src="common/images/product-list.jpg" alt="商品一覧" class="product-list">
-    <p class="list_text1">商品一覧</p>
-  </div>
+    <div class="list_container">
+     <img src="common/images/product-list.jpg" alt="商品一覧" class="product-list">
+      <!-- <p class="list_text1">商品一覧</p> -->
+    </div>
+  
   <div class="philosophy_container">
-    <img src="common/images/philosophy-bg-sp.jpg" alt="philosophy" class="philosophy">
+  <picture>
+          <source srcset="common/images/philosophy-bg-pc.jpg" media="(min-width:768px)" type="image/jpg">
+          <img class="philosophy" src="common/images/philosophy-bg-sp.jpg" alt="philosophy">
+  </picture>
+
+
+    <!-- <img src="common/images/philosophy-bg-sp.jpg" alt="philosophy" class="philosophy"> -->
     <div class="philosophy_text_container">
       <h1 class="philosophy_text1">philosophy</h1>
       <p class="philosophy_text2">私たちの信念</p>
