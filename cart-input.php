@@ -54,7 +54,7 @@ require 'includes/header.php';
 
       <?php foreach($_SESSION['cart'] as $productId => $item): ?>
       <div class="merchandise_area">
-        <img src="" alt="商品画像" class="merchandise_image">
+        <img src="common/images/donuts<?= htmlspecialchars($productId) ?>.jpg" alt="商品画像" class="merchandise_image">
         <p class="merchandise_name"><?= htmlspecialchars($item['name'], ENT_QUOTES, 'UTF-8') ?></p>
         <p class="price">税込&#12288;&#165;<?= number_format($item['price']) ?></p>
         <p class="count">数量&#12288;<?= $item['count'] ?>個</p>
@@ -86,4 +86,5 @@ require 'includes/header.php';
 
   </main>
 
+  
 <?php require 'includes/footer.php' ?>

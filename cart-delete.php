@@ -15,9 +15,9 @@ if (isset($_SESSION['cart'][$productId])) {
 header('Location: cart-show.php');
 exit;
 
-
 require 'includes/header.php'
 ?>
+
 
   <main>
     <p class="breadcrumbs"><a href="index.php">TOP</a> &gt; カート</p>
@@ -34,5 +34,6 @@ require 'includes/header.php'
 
     <p class="shopping_btn"><a href="product.php">買い物を続ける</a></p>
   </main>
+
 
 <?php require 'includes/footer.php';?>
