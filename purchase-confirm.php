@@ -122,15 +122,15 @@ try {
     if ($card) {
         // クレジットカード情報がある場合
         echo "
-        <div class='purchase-button'>
-            <button>ご購入を確定する</button>
-        </div>
+        <form action='purchase-complete.php' method='post' class='purchase-button'>
+            <button type='submit'>ご購入を確定する</button>
+        </form>
         ";
     } else {
         // クレジットカード情報がない場合
         echo "
         <div class='purchase-button'>
-            <button>カード情報を登録する</button>
+            <a href='card-input.php'>カード情報を登録する</a>
         </div>
         ";
     }
@@ -138,7 +138,7 @@ try {
     // エラーが発生しても「カード情報を登録する」ボタンを表示
     echo "
     <div class='purchase-button'>
-        <button>カード情報を登録する</button>
+        <a href='card-input.php'>カード情報を登録する</a>
     </div>
     ";
 }
