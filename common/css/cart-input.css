@@ -1,7 +1,10 @@
 @charset "utf-8";
 
 .breadcrumbs {
-  text-align: left;
+  padding: 12px 20px;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
 }
 
 .guest_name_area {
@@ -54,9 +57,8 @@
 .confirm_window p {
   margin: 38px 0 20px;
   font-size: 16px;
-  font-size: 500;
+  font-weight: 500;
 }
-
 
 .shopping_confirm {
   height: 36px;

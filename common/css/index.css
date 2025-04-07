@@ -41,7 +41,7 @@ body {
   margin: 0;
   justify-content: center;
   margin-top: clamp(19px, 6vw, 80px);
-  
+
 }
 
 .forseal_container {
@@ -56,8 +56,8 @@ body {
   height: 42vw;
   /* margin: 20px; */
   position: relative;
-  margin-right:clamp(19px, 3vw, 40px);
-  
+  margin-right: clamp(19px, 3vw, 40px);
+
 
 
 }
@@ -113,7 +113,7 @@ body {
   justify-content: center;
   margin-top: clamp(20px, 3vw, 40px);
   text-align: center;
-  
+
 }
 
 .product-list {
@@ -203,27 +203,34 @@ body {
 }
 
 h2 {
-  font-size: clamp(20px, 2vw + 8px, 32px); /* 可変フォント */
+  font-size: clamp(20px, 2vw + 8px, 32px);
   line-height: 1;
   font-weight: bold;
   color: black;
-  padding-bottom: 10px;
-  display: inline-block; /* 中央寄せのためにブロック化 */
-  margin: 0 auto;
+  /* padding-bottom: 50px; */
+  /* display: inline-block; 中央寄せのためにブロック化 */
+  margin: 0;
   text-align: center;
-  white-space: nowrap; /* 折り返し防止 */
-  position: relative; /* 疑似要素の基準位置 */
+  /* white-space: nowrap; 折り返し防止 */
+  /* padding-bottom: clamp(8px, 2vw, 12px); */
+
 }
 
 h2::after {
   content: "";
   display: block;
-  width: calc(100% + 20px); /* 文字幅より20px長く */
-  height: clamp(4px, 0.5vw + 2px, 8px); /* クランプで太さ調整 */
+  /* width: clamp(152px, 5vw, 240px); */
+  width: 40vw;
+  height: clamp(4px, 0.5vw + 2px, 8px);
+  /*クランプで太さ調整*/
   background-color: #ffd233;
-  position: absolute;
-  left: -10px; /* 左右均等に広げるためのオフセット */
-  bottom: 0; /* 文字の真下に配置 */
+  text-align: center;
+  /* bottom: 0; 文字の真下に配置 */
+  margin: 0 auto;
+  /* margin-top: clamp(8px, 2vw, 12px); */
+  /* margin-top: 50px; */
+  margin: clamp(8px, 2vw, 12px) auto 0 auto;
+  /* 上マージンで間隔を作る */
 }
 
 
@@ -240,6 +247,8 @@ h2::after {
   /* 適当 */
   font-size: 1.2rem;
   /* 適当 */
+  width: clamp(35px, 5vw, 60px);
+  height: clamp(35px, 5vw, 60px);
 }
 
 .rank_number2 {
@@ -248,54 +257,71 @@ h2::after {
   /* 横方向の中央揃え */
   align-items: center;
   /* 縦方向の中央揃え */
-  width: 35px;
+  /* width: 35px; */
   /* 横幅 */
-  height: 35px;
+  /* height: 35px; */
   /* 縦幅 */
   background-color: #e8c2ca;
   color: white;
   font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: 20px;
+
+  width: clamp(35px, 5vw, 60px);
+  height: clamp(35px, 5vw, 60px);
 }
 
 .donuts_image {
-  width: 158px;
-  height: 158px;
-
+  /* width: 158px; */
+  /* width: clamp(158px, 10vw, 320px); */
+  /* height: 158px; */
+  /* height: clamp(158px, 10vw, 320px); */
+  width: 42.13vw;
+  max-width: 320px;
 }
 
 
 .list_text {
-  font-weight: medium;
-  font-size: 16px;
+  font-weight: 500;
+  font-size: clamp(16px, 3vw, 24px);
   line-height: 1.6;
   color: #7f5539;
-  margin: 22px 0;
-
-  width: 158px;
+  margin: 22px 2vw;
+  max-width: 320px;
+  /* width: 158px; */
+  width: 40vw;
 }
 
 .list_price {
-  font-size: 16px;
+  /* font-size: 16px; */
+  font-size: clamp(16px, 2vw + 12px, 24px);
+
+  /* font-size: 4.26vw; */
   line-height: 1;
   color: #bf0000;
   display: inline-block;
 
-  margin-right: 8vw;
+  /* margin-right: 6vw; */
   /*spacebetween効かないから適当に入れた*/
 }
 
 .heart-mark {
   width: 20px;
   height: 20px;
-  display: inline-block;
+  /* display: inline-block; */
+  /* margin-left: 25px; */
 }
 
 .in_cart {
-  width: 158px;
-  height: 36px;
-  font-size: 12px;
+  /* width: 158px; */
+  width: 42.1vw;
+  max-width: 260px;
+  /* height: 36px; */
+  height: 9.6vw;
+  max-height: 52px;
+  /* font-size: 12px; */
+  font-size: clamp(12px, 1.5vw, 20px);
+
   line-height: 1;
   color: #ffffff;
   background-color: #7f5539;
@@ -308,28 +334,35 @@ h2::after {
 }
 
 .price-container {
-  display: flex;
   /* インライン要素でも使えるフレックス */
-  align-items: center;
+  /* align-items: center; */
   /* 縦方向の中央揃え */
   /* width: 100%; */
+  display: flex;
   justify-content: space-between;
+  flex-wrap: nowrap;
 }
 
 
 
 .rank_container {
-  margin: 72px 10px 80px 20px;
+  margin: 72px 0 80px;
   display: flex;
   flex-direction: column;
   /* 縦方向に並べる */
   align-items: center;
   /* 中央揃えにしておくと綺麗 */
-  justify-content: space-around;
+  /* justify-content: space-around; */
+  /* max-width: 158px; */
+  /* display: flex; */
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  /* padding: 0 10px; */
+  
 }
 
 .rank_container2 {
-  margin: 72px 10px 80px;
+  margin: 72px 0 80px;
   display: flex;
   flex-direction: column;
   /* 縦方向に並べる */
@@ -342,6 +375,10 @@ h2::after {
 
 .container-wrapper {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-content: flex-start; /* 折り返し後も上詰め */
+  margin: 0 5.3vw;
 }
 
 
@@ -394,7 +431,7 @@ h2::after {
     left: 50%;
     transform: translate(-50%, -50%);
   }
-  
+
   .philosophy_text4 {
     position: absolute;
     color: #ffffff;
@@ -406,4 +443,35 @@ h2::after {
     left: 50%;
     transform: translate(-50%, -50%);
   }
+
+  h2::after {
+    content: "";
+    display: block;
+    /* width: clamp(152px, 5vw, 240px); */
+    width: 20vw;
+    height: clamp(4px, 0.5vw + 2px, 8px);
+    /*クランプで太さ調整*/
+    background-color: #ffd233;
+    text-align: center;
+    margin: 0 auto;
+    margin: clamp(8px, 2vw, 12px) auto 0 auto;
+    
+  }
+  .list_price {
+    font-size: 24px;
+    /* font-size: 4.26vw; */
+    line-height: 1;
+    color: #bf0000;
+    display: inline-block;
+  
+    margin-right: 8vw;
+    /*spacebetween効かないから適当に入れた*/
+  }
+  .heart-mark {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    margin-left: 60px;
+  }
+
 }

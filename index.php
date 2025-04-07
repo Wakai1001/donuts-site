@@ -60,7 +60,7 @@
         <?php
           $product = [
             'id' => 1,
-            'name' => 'チョコドーナツ',
+            'name' => 'CCドーナツ 当店オリジナル (5個入り)',
             'price' => 1500
           ];
         ?>
@@ -69,7 +69,7 @@
           <!-- ENT_QUOTES → シングルクォート（'）とダブルクォート（"）もエスケープしてXSS対策 -->
           <!-- UTF-8 → 文字化けや誤動作を防ぐためにエンコーディングを明示 -->
           <input type="hidden" name="name" value="<?= htmlspecialchars($product['name'], ENT_QUOTES, 'UTF-8') ?>">
-          <input type="hidden" name="price" value="<?= $product['price'] ?>">
+          <input type="hidden" name="price" value="<?= floatval($product['price']) ?>">
           <input type="hidden" name="count" value="1">
           <input type="submit" value="カートに入れる">
         </form>
@@ -86,9 +86,9 @@
         </div>
         <div class="in_cart">カートに入れる</div>
       </div>
-    </div>
+      <!-- </div> -->
 
-    <div class="container-wrapper">
+      <!-- <div class="container-wrapper"> -->
       <div class="rank_container">
         <div class="rank_number2">3</div>
         <img src="common/images/fruit-donuts-2.jpg" alt="フルーツドーナツ(14個入り)" class="donuts_image">
@@ -99,7 +99,9 @@
         </div>
         <div class="in_cart">カートに入れる</div>
       </div>
+      <!-- </div> -->
 
+      <!-- <div class="container-wrapper"> -->
       <div class="rank_container2">
         <div class="rank_number2">4</div>
         <img src="common/images/chocolate-delight.jpg" alt="チョコレートデライト(5個入り)" class="donuts_image">
@@ -110,31 +112,31 @@
         </div>
         <div class="in_cart">カートに入れる</div>
       </div>
-    </div>
+      
 
-    <div class="container-wrapper">
-    <div class="rank_container">
-      <div class="rank_number2">5</div>
-      <img src="common/images/best-selection.jpg" alt="ベストセレクション(4個入り)" class="donuts_image">
-      <p class="list_text">ベストセレクション(4個入り)</p>
-      <div class="price_container">
-        <p class="list_price">税込　¥1,200</p>
-        <img src="common/images/favorite.png" alt="ハートマーク" class="heart-mark">
+        <!-- <div class="container-wrapper"> -->
+      <div class="rank_container">
+        <div class="rank_number2">5</div>
+        <img src="common/images/best-selection.jpg" alt="ベストセレクション(4個入り)" class="donuts_image">
+        <p class="list_text">ベストセレクション(4個入り)</p>
+        <div class="price_container">
+          <p class="list_price">税込　¥1,200</p>
+          <img src="common/images/favorite.png" alt="ハートマーク" class="heart-mark">
+        </div>
+       <div class="in_cart">カートに入れる</div>
       </div>
-      <div class="in_cart">カートに入れる</div>
-    </div>
 
-    <div class="rank_container2">
-      <div class="rank_number2">6</div>
-      <img src="common/images/strawberry-crush.jpg" alt="ストロベリークラッシュ(5個入り)" class="donuts_image">
-      <p class="list_text">ストロベリークラッシュ(5個入り)</p>
-      <div class="price_container">
-        <p class="list_price">税込　¥1,800</p>
-        <img src="common/images/favorite.png" alt="ハートマーク" class="heart-mark">
-      </div>
-      <div class="in_cart">カートに入れる</div>
+      <div class="rank_container2">
+        <div class="rank_number2">6</div>
+        <img src="common/images/strawberry-crush.jpg" alt="ストロベリークラッシュ(5個入り)" class="donuts_image">
+        <p class="list_text">ストロベリークラッシュ(5個入り)</p>
+        <div class="price_container">
+          <p class="list_price">税込　¥1,800</p>
+          <img src="common/images/favorite.png" alt="ハートマーク" class="heart-mark">
+        </div>
+        <div class="in_cart">カートに入れる</div>
+    
     </div>
-  </div>
   </section>
 </main>
-  <?php require 'includes/footer.php'; ?>
+
