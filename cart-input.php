@@ -7,11 +7,11 @@ require 'includes/database.php';
 $productId = $_POST['product_id'] ?? null;
 $name = $_POST['name'] ?? null;
 $price = $_POST['price'] ?? null;
-$count = $_POST['count'] ?? 1; // デフォルトの値を 1 にする
+$count = $_POST['count'] ?? 1; // デフォルトの値を1にする
 
-
+ // カートが未定義なら空の配列をセット
   if (!isset($_SESSION['cart'])) {
-    $_SESSION['cart'] = []; // カートが未定義なら空の配列をセット
+    $_SESSION['cart'] = [];
   }
 
   if (isset($_SESSION['cart'][$productId])) {
@@ -25,43 +25,12 @@ $count = $_POST['count'] ?? 1; // デフォルトの値を 1 にする
        'count' => $count
    ];
 }
-// ログインしているユーザーの場合
-if (isset($_SESSION['user_id'])) {
 
-  //ログインしているユーザーのIDを変数に代入
-  $customerId = $_SESSION['user_id'];
-
-  // purchaseテーブルに購入情報を追加
-  $stmt=$pdo->prepare("insert into purchase (customer_id) values (:customerId)");
-  $stmt->execute(['customerId' => $customerId]);
-  
-  //購入番号を更新する
-  $purchaseId = $pdo->lastInsertId();
-
-  // purchase_detailテーブルに商品の詳細を追加
-  foreach ($_SESSION['cart'] as $productId => $item) {
-      $sql="insert into purchase_detail (purchase_id, product_id, count) values (:purchase_id, :product_id, :count)";
-      $stmt = $pdo->prepare($sql);
-      $stmt->execute([
-        'purchase_id' => $purchaseId,
-        'product_id' => $productId,
-        'count' => $item['count']
-      ]);
-    }
-    
-  // カート情報をセッションから削除
-  $_SESSION['cart'] = [];
-
-} else {
-
-
-}
-
-// 購入画面に遷移する
-// header('Location: cart.php'); 
+$_SESSION['message'] = "カートに商品を追加しました。";
 
 // カートページへリダイレクト
-// exit;
+header('Location: cart-show.php'); 
+exit;
 
 require 'includes/header.php';
 ?>
