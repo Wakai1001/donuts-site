@@ -11,6 +11,15 @@
   letter-spacing: 0;
 }
 
+.welcome {
+  text-align: left;
+  color: #7F5539;
+  height: 40px;
+  border-bottom: 3px solid #E8C2CA;
+  border-top: 3px solid #E8C2CA;
+  padding: 12px auto 12px 0;
+}
+
 .cart_input {
   padding: 24px 20px;
   font-size: 12px;
