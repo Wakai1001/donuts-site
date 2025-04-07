@@ -2,32 +2,18 @@
 session_start(); 
 require 'includes/database.php';
 
-
-
-
 // 商品IDを取得
 $productId = $_POST['product_id'] ?? null;
 
-// ログインユーザーの場合、ユーザーごとのカートを操作
-$userId = $_SESSION['user_id'] ?? null; // ログインしていない場合はnull
-
-if ($userId) {
-    // ユーザーごとのカート管理
-    if (isset($_SESSION['user_cart'][$userId][$productId])) {
-        unset($_SESSION['user_cart'][$userId][$productId]); // 商品を削除
-    }
-} else {
-    // ゲストのカート管理
-    if (isset($_SESSION['cart'][$productId])) {
-        unset($_SESSION['cart'][$productId]); // 商品を削除
-    }
-}
-
-// 購入画面に遷移する
-// header('Location: cart.php'); 
+// カートに商品がある場合のみ削除
+if (isset($_SESSION['cart'][$productId])) {
+    unset($_SESSION['cart'][$productId]); // 商品を削除
+    $_SESSION['message'] = "カートから商品を削除しました。";
+  }
 
 // カートページへリダイレクト
-// exit;
+header('Location: cart-show.php');
+exit;
 
 
 require 'includes/header.php'
@@ -46,21 +32,6 @@ require 'includes/header.php'
 
     <p class="cart_input">カートから商品を削除しました。</p>
 
-
-<!--     
-    <img src="common/images/fruit-donuts-1.jpg" alt="フルーツドーナツimg" class="donuts_image">
-    
-    <p class="merchandise">フルーツドーナツセット（12個入り）
-    </p>
-    <p class="price">税込 ￥3,500</p>
-    
-    <p class="num">数量　1個</p>
-    
-    <p class="delete">削除する</p>
-    <div class="confirm_window">
-      <p>ご注文合計：<span class="price">税込￥5,000</span></p>
-      <input type="submit" value="ご購入確認へ進む" class="shopping_confirm">
-    </div> -->
     <p class="shopping_btn"><a href="product.php">買い物を続ける</a></p>
   </main>
 

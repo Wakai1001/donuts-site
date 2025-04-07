@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+/* パンくずメニュー枠 */
 .breadcrumbs {
   padding: 12px 20px;
   font-size: 12px;
@@ -7,6 +8,7 @@
   letter-spacing: 0;
 }
 
+/* ユーザー名の枠 */
 .guest_name_area {
   padding: 12px 20px;
   font-size: 12px;
@@ -14,35 +16,65 @@
   letter-spacing: 0;
 }
 
-.cart_input {
+.cart_message {
   padding: 24px 20px;
   font-size: 12px;
   color: #333;
 }
 
+/* 商品の枠 */
 .merchandise_area {
-  padding: 0 20px 70px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 商品画像 */
+.merchandise_image {
+  height: 335px;
+  margin-bottom: 20px;
+  max-width: 100%;
   text-align: center;
 }
 
+/* 商品名 */
 .merchandise_name {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 0;
   margin-bottom: 20px;
-  font-weight: 600;
-
 }
 
+/* 商品の値段 */
 .price {
-  margin-bottom: 16px;
   color: #BF0000;
+  font-size: 16px;
+  line-height: 1;
+  letter-spacing: 0;
+  margin-bottom: 20px;
 }
 
+/* 商品の個数 */
 .count {
   margin-bottom: 16px;
   color: #333;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 0;
 }
 
-.delete_btn {
+/* 削除する */
+.delete {
   padding-bottom: 4px;
+  color: #7F5539;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: 0;
   border-bottom: 0.5px solid #7F5539;
 }
 
@@ -70,16 +102,20 @@
   background-color: #BF0000;
 }
 
-.shopping_btn {
-  padding: 12px 38px;
-  margin: 40px auto 100px;
-  width: 160px;
-  color: #fff;
-  background-color: #7F5539;
-  font-size: 12px;
+.product_return {
   text-align: center;
 }
 
+.continue {
+  margin: 40px 0 80px;
+  padding: 12px 38px;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
+  border: 1px solid #7F5539;
+  background-color: #7F5539;
+  color: #fff;
+}
 
 @media screen and (min-width:768px) {
   .guest_name_area {

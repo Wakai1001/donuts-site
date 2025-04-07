@@ -60,7 +60,7 @@
         <?php
           $product = [
             'id' => 1,
-            'name' => 'チョコドーナツ',
+            'name' => 'CCドーナツ 当店オリジナル (5個入り)',
             'price' => 1500
           ];
         ?>
@@ -69,7 +69,7 @@
           <!-- ENT_QUOTES → シングルクォート（'）とダブルクォート（"）もエスケープしてXSS対策 -->
           <!-- UTF-8 → 文字化けや誤動作を防ぐためにエンコーディングを明示 -->
           <input type="hidden" name="name" value="<?= htmlspecialchars($product['name'], ENT_QUOTES, 'UTF-8') ?>">
-          <input type="hidden" name="price" value="<?= $product['price'] ?>">
+          <input type="hidden" name="price" value="<?= floatval($product['price']) ?>">
           <input type="hidden" name="count" value="1">
           <input type="submit" value="カートに入れる">
         </form>
