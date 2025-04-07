@@ -29,7 +29,7 @@ require 'includes/header.php'
       <div class="merchandise_area">
         <img src="common/images/donuts<?= htmlspecialchars($item['id']) ?>.jpg" alt="商品画像" class="merchandise_image">
         <p class="merchandise_name"><?= htmlspecialchars($item['name'], ENT_QUOTES, 'UTF-8') ?></p>
-        <p class="price">税込&nbsp;¥<?= number_format($item['price']) ?></p>
+        <p class="price">税込&nbsp;&#165;<?= number_format($item['price']) ?></p>
         <p class="count">数量&nbsp;<?= $item['count'] ?>個</p>
         <form action="cart-delete.php" method="post" class="delete">
           <input type="hidden" name="product_id" value="<?= $item['id'] ?>">
@@ -39,8 +39,12 @@ require 'includes/header.php'
     <?php endforeach; ?>
 
     <div class="confirm_window">
-        <p>ご注文合計：<span class="price">税込&#12288;￥<?= number_format($total) ?></span></p>
-        <input type="submit" value="ご購入確認へ進む" class="shopping_confirm">
+        <p>ご注文合計：<span class="price">税込&#12288;&#165;<?= number_format($total) ?></span></p>
+
+
+        <form action="purchase-confirm.php" method="post">
+          <input type="submit" value="ご購入確認へ進む" class="shopping_confirm">
+        </form>
     </div>
 
   <?php else: ?>
@@ -50,13 +54,12 @@ require 'includes/header.php'
     </div>
   
   <?php endif; ?>
-
-  <form action="product.php" method="post" class="product_return">
-    <input type="submit" value="買い物を続ける" class="continue">
-  </form>
  
-</main>
+  <p class="product_return">
+    <a href="product.php" class="continue">買い物を続ける</a>
+  </p>
 
+</main>
 
 
 <?php require 'includes/footer.php' ?>
