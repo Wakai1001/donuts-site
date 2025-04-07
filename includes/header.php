@@ -117,7 +117,7 @@ echo '</title>';
             </div>
 
             <ul class="nav_menu">
-              <li><a href="">top</a></li>
+              <li><a href="index.php">top</a></li>
               <li><a href="">商品一覧</a></li>
               <li><a href="">よくある質問</a></li>
               <li><a href="">問い合わせ</a></li>
@@ -134,12 +134,12 @@ echo '</title>';
       <?php if(isset($_SESSION['customer'])): ?>
       <div class="login_nav" id="login_after">
         <a href="logout-input.php"><img src="common/images/login-icon.png" alt="ログアウト画像"><p>ログアウト</p></a>
-        <a href="cart.php"><img src="common/images/cart-icon.png" alt="カート画像"><p>カート</p></a>
+        <a href="cart-show.php"><img src="common/images/cart-icon.png" alt="カート画像"><p>カート</p></a>
       </div>
       <?php else: ?>
       <div class="login_nav" id="login_before">
         <a href="login-input.php"><img src="common/images/login-icon.png" alt="ログイン画像"><p>ログイン</p></a>
-        <a href="cart.php"><img src="common/images/cart-icon.png" alt="カート画像"><p>カート</p></a>
+        <a href="cart-show.php"><img src="common/images/cart-icon.png" alt="カート画像"><p>カート</p></a>
       </div>
       <?php endif; ?>
       

@@ -54,13 +54,6 @@ h3 {
   text-align: center;
 }
 
-body {
-  font-family: 'Noto Sans JP', sans-serif;
-  /* color: #59342E; */
-  /* background-color: #FDF9F5; */
-  margin: 0;
-
-}
 
 /* .container, */
 .section {
@@ -108,7 +101,7 @@ body {
   margin: 12px 0;
   /* display: inline-block;*/
   width: 14vw;
-  white-space: nowrap; 
+  white-space: nowrap;
 }
 
 .include_tax {
@@ -215,17 +208,18 @@ button:hover {
 
 .product-table,
 .address-table,
-.payment-table
- {
+.payment-table {
   margin: 10px auto;
   max-width: 400px;
   border-top: 1px solid #e8c2ca;
   border-bottom: 1px solid #e8c2ca;
 }
-.section{
+
+.section {
   margin: 0 auto;
-  
+
 }
+
 table {
   width: 100%;
   /* border-collapse: collapse; */
