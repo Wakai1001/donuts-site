@@ -1,0 +1,121 @@
+@charset "utf-8";
+
+/* 追加デザイン用header領域↓*/
+header {
+  background: #fff;
+  height: 102px;
+}
+
+.header_inner {
+  padding: 0;
+  display: block;
+  height: 100%;
+}
+
+.header_nav {
+  display: none;
+}
+
+.login_nav {
+  display: none;
+}
+
+.search_design {
+  display: none;
+}
+
+/* ロゴ画像 */
+h1 {
+  left: 13%;
+  top: 3%;
+}
+
+/* 追加デザイン用header領域↑ */
+
+/* main領域↓ */
+h2 {
+  margin: 12px 0 72px;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.message_area {
+  height: 84px;
+  margin: 0 40px 24px;
+  border: 2px solid #e8c2ca;
+}
+
+.message_area p {
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.success_message {
+  margin: 20px auto;
+  color: #333;
+}
+
+.appreciatio_message {
+  margin: 0 auto 20px;
+}
+
+.top_page_return {
+  margin: 0 40px 340px;
+  font-size: 12px;
+  line-height: 1;
+  letter-spacing: 0;
+  text-align: right;
+}
+
+.top_page_return a {
+  padding-bottom: 4px;
+  border-bottom: 1px solid #7f5539;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width:768px) {
+  h2 {
+    margin: 58px 0 80px;
+    font-size: 32px;
+    line-height: 1;
+    letter-spacing: 0;
+    text-align: center;
+  }
+
+  .message_area {
+    height: 244px;
+    margin: 0 auto 20px;
+    width: 600px;
+  }
+
+  .message_area .success_message {
+    margin: 80px auto 40px;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .message_area .appreciatio_message {
+    margin: 0 auto 80px;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .top_page_return {
+    margin: 0 auto 378px;
+    width: 600px;
+    font-size: 20px;
+    line-height: 1;
+    letter-spacing: 0;
+  }
+
+  .top_page_return a {
+    padding-bottom: 8px;
+  }
+
+}
