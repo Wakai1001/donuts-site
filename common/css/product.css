@@ -76,7 +76,6 @@ h3 {
   /* margin: 22px 0; */
   margin-top: 19.5px;
   margin-bottom: 22px;
-
   /* width: 158px; */
 }
 
@@ -95,7 +94,6 @@ h3 {
   line-height: 1;
   color: #bf0000;
   /* display: inline-block; */
-
   /* margin-right: 8vw; */
 }
 
@@ -125,13 +123,12 @@ h3 {
 @media screen and (min-width:768px) {
   /* ～ドーナツサイト商品一覧（PC版）～ */
 
-  /* メイン */
+  /* メイン （PC版）*/
   main {
     max-width: 90vw;
     margin-left: auto;
     margin-right: auto;
   }
-
 
   /* タイトル1　商品一覧（PC版） */
   h2 {
@@ -141,8 +138,6 @@ h3 {
     /* 黄色下線 */
     width: 200px;
     border-bottom: 8px solid #ffd233;
-    /*↑ PC版にも↑solid #ffd233;入れないと反映されなかった */
-
     margin-bottom: 80px;
     margin-top: 79px;
   }
@@ -158,12 +153,10 @@ h3 {
     margin-bottom: 104px;
   }
 
-
   /* ※ドーナツ画像～カートに入れるまでの */
-  /* 個々の箱 */
+  /* 個々の箱（PC版） */
   .product_container {
     margin-bottom: 80px;
-
     width: 25vw;
   }
 
@@ -186,8 +179,6 @@ h3 {
     /* width: 320px; */
   }
 
-
-
   /* 商品金額（PC版） */
   .list_price {
     font-size: 24px;
@@ -196,14 +187,14 @@ h3 {
     /* margin-right: 8vw; */
   }
 
-  /* ハートマーク （PC版）*/
+  /* ハートマーク（PC版）*/
   .heart_mark {
     width: 24px;
     height: 24px;
     /* display: inline-block; */
   }
 
-  /* カートに入れるボタン  */
+  /* カートに入れるボタン（PC版）  */
   .cart_btn {
     width: 260px;
     height: 52px;
