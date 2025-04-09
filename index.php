@@ -25,8 +25,9 @@
     </div>
   </div>
     <div class="list_container">
+    <a href="product.php">
      <img src="common/images/product-list.jpg" alt="商品一覧" class="product-list">
-      <!-- <p class="list_text1">商品一覧</p> -->
+     </a>
     </div>
   
   <div class="philosophy_container">
@@ -51,7 +52,7 @@
       <div class="rank_container">
         <div class="rank_number1">1</div>
         <a href="detail.php?id=1">
-        <img src="common/images/cc-donut.jpg" alt="CCドーナツ" class="donuts_image">
+        <img src="common/images/donuts1.jpg" alt="CCドーナツ" class="donuts_image">
 
         <p class="list_text">CCドーナツ 当店オリジナル（5個入り）</p></a>
         <div class="price_container">
@@ -81,7 +82,7 @@
 
       <div class="rank_container2">
         <div class="rank_number2">2</div>
-        <img src="common/images/fruit-donuts-1.jpg" alt="フルーツドーナツ(12個入り)" class="donuts_image">
+        <img src="common/images/donuts7.jpg" alt="フルーツドーナツ(12個入り)" class="donuts_image">
         <p class="list_text">フルーツドーナツセット（12個入り）</p>
         <div class="price_container">
           <p class="list_price">税込　¥3,500</p>
@@ -95,7 +96,7 @@
       <!-- <div class="container-wrapper"> -->
       <div class="rank_container">
         <div class="rank_number2">3</div>
-        <img src="common/images/fruit-donuts-2.jpg" alt="フルーツドーナツ(14個入り)" class="donuts_image">
+        <img src="common/images/donuts8.jpg" alt="フルーツドーナツ(14個入り)" class="donuts_image">
         <p class="list_text">フルーツドーナツセット（14個入り）</p>
         <div class="price_container">
           <p class="list_price">税込　¥4,000</p>
@@ -109,7 +110,7 @@
       <!-- <div class="container-wrapper"> -->
       <div class="rank_container2">
         <div class="rank_number2">4</div>
-        <img src="common/images/chocolate-delight.jpg" alt="チョコレートデライト(5個入り)" class="donuts_image">
+        <img src="common/images/donuts2.jpg" alt="チョコレートデライト(5個入り)" class="donuts_image">
         <p class="list_text">チョコレートデライト（5個入り）</p>
         <div class="price_container">
           <p class="list_price">税込　¥1,600</p>
@@ -123,7 +124,7 @@
         <!-- <div class="container-wrapper"> -->
       <div class="rank_container">
         <div class="rank_number2">5</div>
-        <img src="common/images/best-selection.jpg" alt="ベストセレクション(4個入り)" class="donuts_image">
+        <img src="common/images/donuts9.jpg" alt="ベストセレクション(4個入り)" class="donuts_image">
         <p class="list_text">ベストセレクションボックス（4個入り）</p>
         <div class="price_container">
           <p class="list_price">税込　¥1,200</p>
@@ -136,7 +137,7 @@
 
       <div class="rank_container2">
         <div class="rank_number2">6</div>
-        <img src="common/images/strawberry-crush.jpg" alt="ストロベリークラッシュ(5個入り)" class="donuts_image">
+        <img src="common/images/donuts6.jpg" alt="ストロベリークラッシュ(5個入り)" class="donuts_image">
         <p class="list_text">ストロベリークラッシュ（5個入り）</p>
         <div class="price_container">
           <p class="list_price">税込　¥1,800</p>
