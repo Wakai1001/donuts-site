@@ -19,5 +19,6 @@
   </div>
 </footer>
 <script src="common/js/drawer-menu.js"></script>
+<script src='common/js/favorite.js'></script>
 </body>
 </html>

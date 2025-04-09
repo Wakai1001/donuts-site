@@ -50,10 +50,11 @@
       <div class="rank_container">
         <div class="rank_number1">1</div>
         <img src="common/images/cc-donut.jpg" alt="CCドーナツ" class="donuts_image">
-        <p class="list_text">CCドーナツ 当店オリジナル (5個入り)</p>
+        <p class="list_text">CCドーナツ 当店オリジナル（5個入り）</p>
         <div class="price_container">
           <p class="list_price">税込　¥1,500</p>
-          <img src="common/images/favorite.png" alt="ハートマーク" class="heart-mark">
+          <!-- <img src="common/images/favorite.png" alt="ハートマーク" class="heart-mark"> -->
+          <p class="heart">♡</p>
         </div>
         <form action="cart-input.php" method="post" class="in_cart"><input type="submit" value="カートに入れる"></input></form>
       </div>
@@ -61,10 +62,11 @@
       <div class="rank_container2">
         <div class="rank_number2">2</div>
         <img src="common/images/fruit-donuts-1.jpg" alt="フルーツドーナツ(12個入り)" class="donuts_image">
-        <p class="list_text">フルーツドーナツセット(12個入り)</p>
+        <p class="list_text">フルーツドーナツセット（12個入り）</p>
         <div class="price_container">
           <p class="list_price">税込　¥3,500</p>
-          <img src="common/images/favorite.png" alt="ハートマーク" class="heart-mark">
+          <!-- <img src="common/images/favorite.png" alt="ハートマーク" class="heart-mark"> -->
+          <p class="heart">♡</p>
         </div>
         <div class="in_cart">カートに入れる</div>
       </div>
@@ -74,10 +76,11 @@
       <div class="rank_container">
         <div class="rank_number2">3</div>
         <img src="common/images/fruit-donuts-2.jpg" alt="フルーツドーナツ(14個入り)" class="donuts_image">
-        <p class="list_text">フルーツドーナツセット(14個入り)</p>
+        <p class="list_text">フルーツドーナツセット（14個入り）</p>
         <div class="price_container">
           <p class="list_price">税込　¥4,000</p>
-          <img src="common/images/favorite.png" alt="ハートマーク" class="heart-mark">
+          <!-- <img src="common/images/favorite.png" alt="ハートマーク" class="heart-mark"> -->
+          <p class="heart">♡</p>
         </div>
         <div class="in_cart">カートに入れる</div>
       </div>
@@ -87,10 +90,11 @@
       <div class="rank_container2">
         <div class="rank_number2">4</div>
         <img src="common/images/chocolate-delight.jpg" alt="チョコレートデライト(5個入り)" class="donuts_image">
-        <p class="list_text">チョコレートデライト(5個入り)</p>
+        <p class="list_text">チョコレートデライト（5個入り）</p>
         <div class="price_container">
           <p class="list_price">税込　¥1,600</p>
-          <img src="common/images/favorite.png" alt="ハートマーク" class="heart-mark">
+          <!-- <img src="common/images/favorite.png" alt="ハートマーク" class="heart-mark"> -->
+          <p class="heart">♡</p>
         </div>
         <div class="in_cart">カートに入れる</div>
       </div>
@@ -100,26 +104,32 @@
       <div class="rank_container">
         <div class="rank_number2">5</div>
         <img src="common/images/best-selection.jpg" alt="ベストセレクション(4個入り)" class="donuts_image">
-        <p class="list_text">ベストセレクション(4個入り)</p>
+        <p class="list_text">ベストセレクションボックス（4個入り）</p>
         <div class="price_container">
           <p class="list_price">税込　¥1,200</p>
-          <img src="common/images/favorite.png" alt="ハートマーク" class="heart-mark">
-        </div>
+          <!-- <img src="common/images/favorite.png" alt="ハートマーク" class="heart-mark"> -->
+          <p class="heart">♡</p>
+          </div>
+        <div id="popup" class="popup"></div>
        <div class="in_cart">カートに入れる</div>
       </div>
 
       <div class="rank_container2">
         <div class="rank_number2">6</div>
         <img src="common/images/strawberry-crush.jpg" alt="ストロベリークラッシュ(5個入り)" class="donuts_image">
-        <p class="list_text">ストロベリークラッシュ(5個入り)</p>
+        <p class="list_text">ストロベリークラッシュ（5個入り）</p>
         <div class="price_container">
           <p class="list_price">税込　¥1,800</p>
-          <img src="common/images/favorite.png" alt="ハートマーク" class="heart-mark">
+          <!-- <img src="common/images/favorite.png" alt="ハートマーク" class="heart-mark">
+           </div> -->
+          <!-- <div class="heart-container"> -->
+          <p class="heart">♡</p>
         </div>
         <div class="in_cart">カートに入れる</div>
     
     </div>
   </section>
+  
 </main>
   <?php require 'includes/footer.php' ?>
  

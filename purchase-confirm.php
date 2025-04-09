@@ -1,5 +1,5 @@
 <?php require 'includes/header.php' ?>
-<body>
+<main>
     <div class="container">
         <h2>ご購入確認</h2>
         <h3>ご購入商品</h3>
@@ -148,5 +148,5 @@ try {
 }
 ?>
 
-</body>
+</main>
 <?php require 'includes/footer.php' ?>
