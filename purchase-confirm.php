@@ -1,3 +1,4 @@
+
 <?php 
 session_start();
 require 'includes/database.php';
@@ -48,6 +49,7 @@ require 'includes/header.php';
 
     <h2>ご購入確認</h2>
     <section class="product_area">
+
         <h3>ご購入商品</h3>
             <div class="product_table">
                 <?php foreach ($products as $product): ?>
