@@ -23,33 +23,34 @@ echo '<main>';
 <?php
 $donuts1 =$pdo->query('select*from product limit 1')->fetch();
 
-$donuts2 =$pdo->query('select*from product limit 2');
+$donuts2 =$pdo->query('select*from product limit 2')->fetch();
 
-$donuts3 =$pdo->query('select*from product limit 3');
+$donuts3 =$pdo->query('select*from product limit 3')->fetch();
 
-$donuts4 =$pdo->query('select*from product limit 4');
+$donuts4 =$pdo->query('select*from product limit 4')->fetch();
 
-$donuts5 =$pdo->query('select*from product limit 5');
+$donuts5 =$pdo->query('select*from product limit 5')->fetch();
 
-$donuts6 =$pdo->query('select*from product limit 6');
+$donuts6 =$pdo->query('select*from product limit 6')->fetch();
 
-$donuts7 =$pdo->query('select*from product limit 7');
+$donuts7 =$pdo->query('select*from product limit 7')->fetch();
 
-$donuts8 =$pdo->query('select*from product limit 8');
+$donuts8 =$pdo->query('select*from product limit 8')->fetch();
 
-$donuts9 =$pdo->query('select*from product limit 9');
+$donuts9 =$pdo->query('select*from product limit 9')->fetch();
 
-$donuts10 =$pdo->query('select*from product limit 10');
+$donuts10 =$pdo->query('select*from product limit 10')->fetch();
 
-$donuts11 =$pdo->query('select*from product limit 11');
+$donuts11 =$pdo->query('select*from product limit 11')->fetch();
 
-$donuts12 =$pdo->query('select*from product limit 12');
+$donuts12 =$pdo->query('select*from product limit 12')->fetch();
     
 ?>
 
 <?php
 
 // 18～20行目　サマーシトラスドーナツ
+echo var_dump($donuts2);
 echo '<a href="detail.php?id=',$donuts5,'">';
 echo 'aa';
 echo '<img src="common/images/"donuts',$donuts5[1],'.jpg" class="image-content1" alt="サマーシトラスドーナツ">';
