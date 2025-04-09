@@ -50,8 +50,9 @@
     <div class="container-wrapper">
       <div class="rank_container">
         <div class="rank_number1">1</div>
+        <a href="detail.php?id=1">
         <img src="common/images/cc-donut.jpg" alt="CCドーナツ" class="donuts_image">
-        <p class="list_text">CCドーナツ 当店オリジナル (5個入り)</p>
+        <p class="list_text">CCドーナツ 当店オリジナル (5個入り)</p></a>
         <div class="price_container">
           <p class="list_price">税込　¥1,500</p>
           <img src="common/images/favorite.png" alt="ハートマーク" class="heart-mark">
