@@ -5,153 +5,201 @@ body {
   margin: 0 auto;
 }
 
-
-
-/* 商品一覧 */
+/* ～ドーナツサイト商品一覧（SP版）～ */
+/* メイン */
 main {
   max-width: 90vw;
   margin-left: auto;
   margin-right: auto;
 }
 
-/* タイトル　商品一覧 */
+/* タイトル1　商品一覧（SP版） */
 h2 {
-  width: 152px;
+  font-size: 20px;
+  line-height: 1;
+  padding-bottom: 8px;
+  color: #333;
+
+  /* 黄色下線 */
+  width: 100px;
+  border-bottom: 4px solid #ffd233;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   margin-bottom: 40px;
   margin-top: 32px;
-
-  font-size: 20px;
-  line-height: 1;
-  padding-bottom: 6px;
-  /* display: inline-block;  */
-  color: #333;
-  border-bottom: 4px solid #ffd233;
 }
 
-/* タイトル　バラエティセット */
+/* タイトル2　バラエティセット */
 h3 {
-  width: 152px;
+  font-size: 16px;
+  line-height: 1;
+  padding-bottom: 8px;
+  color: #7F5539;
+
+  /* 黄色下線 */
+  width: 160px;
+  border-bottom: 4px solid #ffd233;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   margin-bottom: 40px;
-
-  font-size: 16px;
-  line-height: 1;
-  padding-bottom: 6px;
-  color: #7F5539;
-  border-bottom: 4px solid #ffd233;
 }
 
-/* 縦、左側の列のそれぞれの箱 */
-/* ※画像～カートに入れるまでのところ */
+/* 商品一覧と */
+/* バラエティセット（共通の箱） */
+.container_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* ※ドーナツ画像～カートに入れるまでの */
+/* 個々の箱 */
 .product_container {
-  /* margin: 72px 10px 80px 20px; */
-  display: flex;
-  flex-direction: column;
-  /* 縦方向に並べる */
-  align-items: center;
-  /* 中央揃えにしておくと綺麗 */
-  justify-content: space-around;
+  margin-bottom: 80px;
+  width: 158px;
 }
 
-
-/* 縦、右側の列のそれぞれの箱 */
-/* ※画像～カートに入れるまでのところ */
-.product_container2 {
-  /* margin: 72px 10px 80px; */
-  display: flex;
-  flex-direction: column;
-  /* 縦方向に並べる */
-  align-items: center;
-  /* 中央揃えにしておくと綺麗 */
-  justify-content: space-around;
-}
-
+/* ドーナツ画像（SP版） */
 .donuts_image {
   width: 158px;
   height: 158px;
-
 }
 
-
+/* 商品名 */
 .list_text {
   font-weight: medium;
   font-size: 16px;
   line-height: 1.6;
   color: #7f5539;
-  margin: 22px 0;
-
-  width: 158px;
+  /* margin: 22px 0; */
+  margin-top: 19.5px;
+  margin-bottom: 22px;
+  /* width: 158px; */
 }
 
-
-.price-container {
+/* 税込み～ハートまでの箱 */
+.price_container {
   display: flex;
   /* インライン要素でも使えるフレックス */
   align-items: center;
   /* 縦方向の中央揃え */
-  /* width: 100%; */
   justify-content: space-between;
 }
 
-
+/* 商品金額 */
 .list_price {
   font-size: 16px;
   line-height: 1;
   color: #bf0000;
-  display: inline-block;
-
-  margin-right: 8vw;
-  /*spacebetween効かないから適当に入れた*/
+  /* display: inline-block; */
+  /* margin-right: 8vw; */
 }
 
 /* ハートマーク */
 .heart_mark {
   width: 20px;
   height: 20px;
-  display: inline-block;
+  /* display: inline-block; */
 }
 
-/* カートに入れる */
-.in_cart {
+/* カートに入れるボタン  */
+/* <!-- ↓10章ｐ152　cssは183　sendボタン --> */
+.submit_btn {
+  text-align: center;
+}
+
+.cart_btn {
   width: 158px;
   height: 36px;
   font-size: 12px;
   line-height: 1;
-  color: #ffffff;
-  background-color: #7f5539;
-  display: inline-flex;
-  /* インラインで使えて中央揃えもOK */
-  justify-content: center;
-  /* 横方向の中央揃え */
-  align-items: center;
-  margin-top: 22.3px;
-  margin-bottom: 80px;
-}
-
-
-/* （仮）カートに入れる */
-/* .submitBtn {
-  text-align: center;
-}
-
-input[type="submit"] {
-  background: #121212;
   color: #fff;
-  padding: 18px 18px;
-} */
-/* ↑（仮）カートに入れる */
+  background: #7f5539;
+  margin-top: 22px;
+}
 
+@media screen and (min-width:768px) {
+  /* ～ドーナツサイト商品一覧（PC版）～ */
 
+  /* メイン （PC版）*/
+  main {
+    max-width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-/* バラエティセット */
-.container-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  /* タイトル1　商品一覧（PC版） */
+  h2 {
+    font-size: 32px;
+    padding-bottom: 17px;
+
+    /* 黄色下線 */
+    width: 200px;
+    border-bottom: 8px solid #ffd233;
+    margin-bottom: 80px;
+    margin-top: 79px;
+  }
+
+  /* タイトル2　バラエティセット（PC版） */
+  h3 {
+    font-size: 24px;
+    padding-bottom: 16px;
+
+    /* 黄色下線 */
+    width: 240px;
+    border-bottom: 8px solid #ffd233;
+    margin-bottom: 104px;
+  }
+
+  /* ※ドーナツ画像～カートに入れるまでの */
+  /* 個々の箱（PC版） */
+  .product_container {
+    margin-bottom: 80px;
+    width: 25vw;
+  }
+
+  /* ドーナツ画像（PC版） */
+  .donuts_image {
+    width: 25vw;
+    height: 25vw;
+    /* width: 320px;
+    height: 320px; */
+  }
+
+  /* 商品名（PC版）*/
+  .list_text {
+    font-size: 24px;
+    /* margin: 22px 0; */
+
+    margin-top: 19.5px;
+    margin-bottom: 22px;
+
+    /* width: 320px; */
+  }
+
+  /* 商品金額（PC版） */
+  .list_price {
+    font-size: 24px;
+    color: #bf0000;
+    /* display: inline-block; */
+    /* margin-right: 8vw; */
+  }
+
+  /* ハートマーク（PC版）*/
+  .heart_mark {
+    width: 24px;
+    height: 24px;
+    /* display: inline-block; */
+  }
+
+  /* カートに入れるボタン（PC版）  */
+  .cart_btn {
+    width: 260px;
+    height: 52px;
+    font-size: 20px;
+    margin-top: 20px;
+  }
 
 }

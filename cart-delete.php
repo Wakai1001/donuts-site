@@ -1,42 +1,39 @@
-<?php require 'includes/header.php' ?>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="common/css/reset.css">
-  <link rel="stylesheet" href="common/css/common.css">
-  <link rel="stylesheet" href="common/css/cart-input.css">
-  <title>カート - 削除ページ | C.C.Donuts</title>
-</head>
+<?php
+session_start(); 
+require 'includes/database.php';
 
-<body>
-  <p class="breadcrumbs"><a href="index.php">TOP</a> &gt; カート</p>
+// 商品IDを取得
+$productId = $_POST['product_id'] ?? null;
 
-  <p class="cart_input">カートから商品を削除しました。
-  </p>
+// カートに商品がある場合のみ削除
+if (isset($_SESSION['cart'][$productId])) {
+    unset($_SESSION['cart'][$productId]); // 商品を削除
+    $_SESSION['message'] = "カートから商品を削除しました。";
+  }
 
-  <img src="common/images/fruit-donuts-1.jpg" alt="フルーツドーナツimg" class="donuts_image">
+// カートページへリダイレクト
+header('Location: cart-show.php');
+exit;
 
-<p class="merchandise">フルーツドーナツセット（12個入り）
-</p>
-<p class="price">税込 ￥3,500</p>
-
-<p class="num">数量　1個</p>
-
-<p class="delete">削除する</p>
-
-  <div class="confirm_window">
-    <p>ご注文合計：<span class="price">税込￥5,000</span></p>
-    <input type="submit" value="ご購入確認へ進む" class="shopping_confirm">
-  </div>
-
-  <div>
-    <input type="submit" value="買い物を続ける" class="continue">
-  </div>
-
-</body>
-
-</html>
+require 'includes/header.php'
+?>
 
 
+  <main>
+    <p class="breadcrumbs"><a href="index.php">TOP</a> &gt; カート</p>
 
-<?php require 'includes/footer.php' ?>
+    <?php if(isset($_SESSION['customer'])): ?>
+    <p class="guest_name_area">ようこそ&#12288; <?= htmlspecialchars($_SESSION['customer']['name']) ?> 様</p>
+    <hr>
+    <?php else: ?>
+    <p class="guest_name_area">ようこそ&#12288;ゲスト様</p>
+    <hr>
+    <?php endif; ?>
+
+    <p class="cart_input">カートから商品を削除しました。</p>
+
+    <p class="shopping_btn"><a href="product.php">買い物を続ける</a></p>
+  </main>
+
+
+<?php require 'includes/footer.php';?>

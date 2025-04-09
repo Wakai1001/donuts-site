@@ -19,7 +19,7 @@ echo '<p><input type="number" name="card_month" min="1" max="12">月</p>';
 echo '<p><input type="number" name="card_year">年</div></p>';
 echo '<div class=card_item><p class="title">セキュリティコード<span class="require">(必須)</span></p>';
 echo '<input type="password" name="card_security_code" minlength="3" maxlength="4"></div>';
-echo '<input type="submit" value="ご入力内容を確認する">';
+echo '<div class=button><input type="submit" value="ご入力内容を確認する"></div>';
 echo '</form>';
 echo '</main>';
 ?>

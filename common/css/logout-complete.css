@@ -70,9 +70,6 @@
     height: 184px;
     margin: 0 auto 24px;
     width: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   #login_area p {
@@ -84,15 +81,12 @@
   .top_page_return {
     margin: 0 auto 378px;
     width: 600px;
-    font-size: 12px;
+    font-size: 20px;
     line-height: 1;
     letter-spacing: 0;
-    text-align: right;
   }
 
   .top_page_return a {
-    padding-bottom: 4px;
-    border-bottom: 1px solid #7f5539;
-    text-transform: uppercase;
+    padding-bottom: 8px;
   }
 }

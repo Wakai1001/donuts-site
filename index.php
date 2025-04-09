@@ -1,6 +1,7 @@
   <?php 
   session_start(); 
-  require 'includes/header.php'
+  require 'includes/database.php';
+  require 'includes/header.php';
   ?>
 
 <main>
@@ -49,14 +50,33 @@
     <div class="container-wrapper">
       <div class="rank_container">
         <div class="rank_number1">1</div>
+        <a href="detail.php?id=1">
         <img src="common/images/cc-donut.jpg" alt="CCドーナツ" class="donuts_image">
-        <p class="list_text">CCドーナツ 当店オリジナル（5個入り）</p>
+
+        <p class="list_text">CCドーナツ 当店オリジナル（5個入り）</p></a>
         <div class="price_container">
           <p class="list_price">税込　¥1,500</p>
           <!-- <img src="common/images/favorite.png" alt="ハートマーク" class="heart-mark"> -->
           <p class="heart">♡</p>
         </div>
-        <form action="cart-input.php" method="post" class="in_cart"><input type="submit" value="カートに入れる"></input></form>
+
+        <?php
+          $product = [
+            'id' => 1,
+            'name' => 'CCドーナツ 当店オリジナル (5個入り)',
+            'price' => 1500
+          ];
+        ?>
+        <form action="cart-input.php" method="post" class="in_cart">
+          <input type="hidden" name="product_id" value="<?= $product['id'] ?>">
+          <!-- ENT_QUOTES → シングルクォート（'）とダブルクォート（"）もエスケープしてXSS対策 -->
+          <!-- UTF-8 → 文字化けや誤動作を防ぐためにエンコーディングを明示 -->
+          <input type="hidden" name="name" value="<?= htmlspecialchars($product['name'], ENT_QUOTES, 'UTF-8') ?>">
+          <input type="hidden" name="price" value="<?= floatval($product['price']) ?>">
+          <input type="hidden" name="count" value="1">
+          <input type="submit" value="カートに入れる">
+        </form>
+
       </div>
 
       <div class="rank_container2">
@@ -131,5 +151,4 @@
   </section>
   
 </main>
-  <?php require 'includes/footer.php' ?>
- 
+
