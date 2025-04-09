@@ -23,9 +23,9 @@ echo '<div class=price_box><p class=product_price>税込　￥',number_format($p
 echo '<p class=favorite><img alt="お気に入り" src="common/images/favorite.png"></p></div>';
 echo '<div class=cart_box><p class=number><input type="text" name="count" value="1"><span class=count>個</span></p>';
   
-echo '<input type="hidden" name="product_id" value="<?= ',$product['id'],' ?>">';
-echo '<input type="hidden" name="name" value="<?=',htmlspecialchars($product['name'], ENT_QUOTES, 'UTF-8'),' ?>">';
-echo '<input type="hidden" name="price" value="<?= ',floatval($product['price']),' ?>">';
+echo '<input type="hidden" name="product_id" value="',$product['id'] ,'">';
+echo '<input type="hidden" name="name" value="',htmlspecialchars($product['name'], ENT_QUOTES, 'UTF-8'),'">';
+echo '<input type="hidden" name="price" value="',floatval($product['price']),'">';
 echo '<input type="submit" value="カートに入れる">';
 echo '</div></form></main>';
 ?>
