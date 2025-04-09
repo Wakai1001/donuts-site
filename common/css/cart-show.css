@@ -167,6 +167,7 @@
 /* 商品画像 */
 .merchandise_image {
   width: 24.5vw;
+  max-width: 335px;
   /* height: 24.5vw; */
   margin-bottom: 20px;
   margin-left: 10px;
@@ -239,8 +240,7 @@
 .confirm_window {
   /* height: 148px; */
   font-size: 24px;
-  margin: 0 auto;
-  width: 90%;
+  width: 100%;
   align-self: center;
   text-align: center;
   border: 2px solid #FFD233;
@@ -252,7 +252,6 @@
 
 /* 枠の中の文字 */
 .confirm_window p {
-  margin: 38px 0 20px;
   font-size: 16px;
   font-weight: 500;
 }
@@ -269,7 +268,8 @@
 }
 
 .product_return {
-  margin: 40px 0 80px;
+  margin: 40px auto 160px;
+  /* margin: 40px 0 80px; */
   text-align: center;
 }
 
