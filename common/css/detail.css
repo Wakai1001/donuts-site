@@ -62,7 +62,7 @@ main {
   margin-bottom: 80px;
 }
 
-.number input[type=number] {
+.number input[type=text] {
   border: 1px #7F5539 solid;
   height: 36px;
   width: 56px;
@@ -136,7 +136,7 @@ main {
     height: 24px;
   }
 
-  .cart_box input[type=number] {
+  .cart_box input[type=text] {
     width: 80px;
     height: 52px;
   }
