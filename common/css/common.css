@@ -221,6 +221,20 @@ small {
   color: #7f5539;
 }
 
+.in_cart {
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.in_cart:hover {
+  transform: translateY(2px); /* ↓ 下に沈む */
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+}
+
+
 
 @media screen and (min-width:768px) {
 
