@@ -47,7 +47,7 @@ if(preg_match('/^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])[A-Za-z0-9]{8,}$/',$password))
   echo '<p class=error>※A-Z、a-z、0-9を少なくとも各1つは含めて8文字以上で入力してください。<p></div>';
 }
 
-echo '<input type="submit" value="この内容で登録する"></form>';
+echo '<div class=center><input type="submit" value="この内容で登録する"></div></form>';
 echo '<p class=back><a href=customer-input.php>戻る</a></p>';
 echo '</main>';
 
