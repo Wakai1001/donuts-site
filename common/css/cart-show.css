@@ -236,6 +236,14 @@
   align-self: end;
 }
 
+.no_items {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  /* justify-self: end; */
+}
+
 /* 合計の表示と購入に移動する表示の枠 */
 .confirm_window {
   /* height: 148px; */
