@@ -2,9 +2,9 @@
 <footer>
   <div class="footer_design">
     <div id="footer_nav">
-      <p><a href="">よくある質問</a></p>
-      <p><a href="">お問い合わせ</a></p>
-      <p><a href="">当サイトのポリシー</a></p>
+      <p><a href="#">よくある質問</a></p>
+      <p><a href="#">お問い合わせ</a></p>
+      <p><a href="#">当サイトのポリシー</a></p>
     </div>
     
     <div id="sns_area">
@@ -19,6 +19,6 @@
   </div>
 </footer>
 <script src="common/js/drawer-menu.js"></script>
-<script src='common/js/favorite.js'></script>
+<script src="common/js/favorite.js"></script>
 </body>
 </html>

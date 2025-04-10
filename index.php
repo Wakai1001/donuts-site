@@ -280,5 +280,6 @@ $donuts12 =[
   </section>
   
 </main>
-<?php require 'includes/footer.php' ?>
 
+
+<?php   require 'includes/footer.php'; ?>
