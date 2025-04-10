@@ -220,10 +220,10 @@ h3 {
   .list_text {
     font-size: 24px;
     /* margin: 22px 0; */
-
+  line-height: 1.6;
     margin-top: 19.5px;
     margin-bottom: 22px;
-
+  letter-spacing: 1.1px;
     /* width: 320px; */
   }
 
