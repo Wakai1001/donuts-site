@@ -49,8 +49,8 @@ require 'includes/header.php'
 
   <?php else: ?>
     
-    <div class="merchandise_area no_items">
-      <p>カートに商品がありません。</p>
+    <div class="merchandise_area">
+      <p class="no_items">カートに商品がありません。</p>
     </div>
   
   <?php endif; ?>
