@@ -218,6 +218,23 @@
     justify-self: end;
   }
 
+.no_items {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  /* justify-self: end; */
+}
+
+/* 合計の表示と購入に移動する表示の枠 */
+.confirm_window {
+  /* height: 148px; */
+  font-size: 24px;
+  width: 100%;
+  align-self: center;
+  text-align: center;
+  border: 2px solid #FFD233;
+
   /* 削除する */
   .delete {
     /* padding-bottom: 4px; */
@@ -244,10 +261,6 @@
     align-self: center;
     text-align: center;
     border: 2px solid #FFD233;
-    /* grid-row-start: 4;
-  grid-row-end: 5;
-  grid-column-start: 1;
-  grid-column-end: 5; */
   }
 
   /* 枠の中の文字 */
