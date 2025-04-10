@@ -283,6 +283,9 @@ h2::after {
   /* height: clamp(158px, 10vw, 320px); */
   width: 42.13vw;
   max-width: 320px;
+  display: block;         /* 画像はインライン要素なのでブロックに */
+  margin: 0 auto;         /* 左右のマージンを auto にして中央寄せ */
+
 }
 
 

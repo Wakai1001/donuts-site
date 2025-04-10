@@ -156,74 +156,127 @@ $donuts12 =[
       </div>
 
       <div class="rank_container2">
-        <div class="rank_number2">2</div>
-        <img src="common/images/donuts7.jpg" alt="フルーツドーナツ(12個入り)" class="donuts_image">
-        <p class="list_text">フルーツドーナツセット（12個入り）</p>
-        <div class="price_container">
-          <p class="list_price">税込　¥3,500</p>
-          <!-- <img src="common/images/favorite.png" alt="ハートマーク" class="heart-mark"> -->
-          <p class="heart">♡</p>
-        </div>
-        <div class="in_cart">カートに入れる</div>
-      </div>
+  <div class="rank_number2">2</div>
+
+  <a href="detail.php?id=7">
+    <img src="common/images/donuts7.jpg" alt="フルーツドーナツ(12個入り)" class="donuts_image">
+    <p class="list_text">フルーツドーナツセット（12個入り）</p>
+  </a>
+
+  <div class="price_container">
+    <p class="list_price">税込　¥3,500</p>
+    <p class="heart">♡</p>
+  </div>
+
+  <!-- ボタンも form に変更 -->
+  <form action="cart-input.php" method="post" class="in_cart">
+    <input type="hidden" name="product_id" value="7">
+    <input type="hidden" name="name" value="フルーツドーナツセット（12個入り）">
+    <input type="hidden" name="price" value="3500">
+    <input type="hidden" name="count" value="1">
+    <input type="submit" value="カートに入れる">
+  </form>
+</div>
       <!-- </div> -->
 
       <!-- <div class="container-wrapper"> -->
       <div class="rank_container">
-        <div class="rank_number2">3</div>
-        <img src="common/images/donuts8.jpg" alt="フルーツドーナツ(14個入り)" class="donuts_image">
-        <p class="list_text">フルーツドーナツセット（14個入り）</p>
-        <div class="price_container">
-          <p class="list_price">税込　¥4,000</p>
-          <!-- <img src="common/images/favorite.png" alt="ハートマーク" class="heart-mark"> -->
-          <p class="heart">♡</p>
-        </div>
-        <div class="in_cart">カートに入れる</div>
-      </div>
+  <div class="rank_number2">3</div>
+
+  <!-- ★画像とテキストをリンクで囲む -->
+  <a href="detail.php?id=8">
+    <img src="common/images/donuts8.jpg" alt="フルーツドーナツ(14個入り)" class="donuts_image">
+    <p class="list_text">フルーツドーナツセット（14個入り）</p>
+  </a>
+
+  <div class="price_container">
+    <p class="list_price">税込　¥4,000</p>
+    <p class="heart">♡</p>
+  </div>
+
+  <!-- ★formに変更してvalueをaタグと一致させる -->
+  <form action="cart-input.php" method="post" class="in_cart">
+    <input type="hidden" name="product_id" value="8">
+    <input type="hidden" name="name" value="フルーツドーナツセット（14個入り）">
+    <input type="hidden" name="price" value="4000">
+    <input type="hidden" name="count" value="1">
+    <input type="submit" value="カートに入れる">
+  </form>
+</div>
       <!-- </div> -->
 
       <!-- <div class="container-wrapper"> -->
       <div class="rank_container2">
-        <div class="rank_number2">4</div>
-        <img src="common/images/donuts2.jpg" alt="チョコレートデライト(5個入り)" class="donuts_image">
-        <p class="list_text">チョコレートデライト（5個入り）</p>
-        <div class="price_container">
-          <p class="list_price">税込　¥1,600</p>
-          <!-- <img src="common/images/favorite.png" alt="ハートマーク" class="heart-mark"> -->
-          <p class="heart">♡</p>
-        </div>
-        <div class="in_cart">カートに入れる</div>
-      </div>
+  <div class="rank_number2">4</div>
+
+  <a href="detail.php?id=2">
+    <img src="common/images/donuts2.jpg" alt="チョコレートデライト(5個入り)" class="donuts_image">
+    <p class="list_text">チョコレートデライト（5個入り）</p>
+  </a>
+
+  <div class="price_container">
+    <p class="list_price">税込　¥1,600</p>
+    <p class="heart">♡</p>
+  </div>
+
+  <form action="cart-input.php" method="post" class="in_cart">
+    <input type="hidden" name="product_id" value="2">
+    <input type="hidden" name="name" value="チョコレートデライト（5個入り）">
+    <input type="hidden" name="price" value="1600">
+    <input type="hidden" name="count" value="1">
+    <input type="submit" value="カートに入れる">
+  </form>
+</div>
+
       
 
         <!-- <div class="container-wrapper"> -->
-      <div class="rank_container">
-        <div class="rank_number2">5</div>
-        <img src="common/images/donuts9.jpg" alt="ベストセレクション(4個入り)" class="donuts_image">
-        <p class="list_text">ベストセレクションボックス（4個入り）</p>
-        <div class="price_container">
-          <p class="list_price">税込　¥1,200</p>
-          <!-- <img src="common/images/favorite.png" alt="ハートマーク" class="heart-mark"> -->
-          <p class="heart">♡</p>
-          </div>
-        <div id="popup" class="popup"></div>
-       <div class="in_cart">カートに入れる</div>
-      </div>
+        <div class="rank_container">
+  <div class="rank_number2">5</div>
 
-      <div class="rank_container2">
-        <div class="rank_number2">6</div>
-        <img src="common/images/donuts6.jpg" alt="ストロベリークラッシュ(5個入り)" class="donuts_image">
-        <p class="list_text">ストロベリークラッシュ（5個入り）</p>
-        <div class="price_container">
-          <p class="list_price">税込　¥1,800</p>
-          <!-- <img src="common/images/favorite.png" alt="ハートマーク" class="heart-mark">
-           </div> -->
-          <!-- <div class="heart-container"> -->
-          <p class="heart">♡</p>
-        </div>
-        <div class="in_cart">カートに入れる</div>
-    
-    </div>
+  <a href="detail.php?id=9">
+    <img src="common/images/donuts9.jpg" alt="ベストセレクション(4個入り)" class="donuts_image">
+    <p class="list_text">ベストセレクションボックス（4個入り）</p>
+  </a>
+
+  <div class="price_container">
+    <p class="list_price">税込　¥1,200</p>
+    <p class="heart">♡</p>
+  </div>
+
+  <div id="popup" class="popup"></div>
+
+  <form action="cart-input.php" method="post" class="in_cart">
+    <input type="hidden" name="product_id" value="9">
+    <input type="hidden" name="name" value="ベストセレクションボックス（4個入り）">
+    <input type="hidden" name="price" value="1200">
+    <input type="hidden" name="count" value="1">
+    <input type="submit" value="カートに入れる">
+  </form>
+</div>
+
+<div class="rank_container2">
+  <div class="rank_number2">6</div>
+
+  <a href="detail.php?id=6">
+    <img src="common/images/donuts6.jpg" alt="ストロベリークラッシュ(5個入り)" class="donuts_image">
+    <p class="list_text">ストロベリークラッシュ（5個入り）</p>
+  </a>
+
+  <div class="price_container">
+    <p class="list_price">税込　¥1,800</p>
+    <p class="heart">♡</p>
+  </div>
+
+  <form action="cart-input.php" method="post" class="in_cart">
+    <input type="hidden" name="product_id" value="6">
+    <input type="hidden" name="name" value="ストロベリークラッシュ（5個入り）">
+    <input type="hidden" name="price" value="1800">
+    <input type="hidden" name="count" value="1">
+    <input type="submit" value="カートに入れる">
+  </form>
+</div>
+
   </section>
   
 </main>
