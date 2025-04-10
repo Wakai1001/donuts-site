@@ -73,8 +73,18 @@ h2 {
   font-size: 12px;
   color: #BF0000;
   margin-top: 12px;
-  margin-bottom: 12px;
+  margin-bottom: 7px;
   text-align: center;
+}
+
+.login {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.login a {
+  text-decoration: underline 1px #7F5539;
 }
 
 .back {
@@ -108,7 +118,12 @@ h2 {
   .error {
     font-size: 20px;
     margin-top: 80px;
+    margin-bottom: 15px;
+  }
+
+  .login {
     margin-bottom: 40px;
+    font-size: 20px;
   }
 
   .back {

@@ -49,9 +49,6 @@ div {
   margin-bottom: 20px;
 }
 
-div:last-of-type {
-  margin-bottom: 40px;
-}
 
 .title {
   font-size: 12px;
@@ -76,6 +73,12 @@ input[type=submit] {
   line-height: 1;
   letter-spacing: 0;
   margin-bottom: 5px;
+}
+
+.center {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 0;
 }
 
 .button {

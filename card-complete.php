@@ -18,6 +18,7 @@ $sql->execute([
    echo '<h2>カード情報登録</h2>';
   echo '<div class=box>';
   echo '<p class=error>クレジットカード情報が登録できませんでした。</p>';
+  echo '<p class=login><a href="login-input">ログイン</a>してください。</p>';
   echo '<p class=back><a href=card-input.php>戻る</a></p></div>';
 }
 echo '</main>';

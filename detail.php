@@ -15,7 +15,7 @@ echo '<p><a href="index.php">TOP</a>&gt;<a href="product.php">商品一覧</a>&g
 <?php endif; ?>
 <?php
 echo '<main>';  
-echo '<form action="cart-input.php" method="post" class="in_cart">';
+echo '<form action="cart-input.php" method="post" class="detail">';
 echo '<div class=product_box><p class=product_img><img alt="image" src="common/images/donuts',$product['id'],'.jpg"></p>';
 echo '<div class=right_box><p class=product_name>',$product['name'],'</p>';
 echo '<p class=product_descriotion>',$product['description'],'</p>';
@@ -26,7 +26,7 @@ echo '<div class=cart_box><p class=number><input type="text" name="count" value=
 echo '<input type="hidden" name="product_id" value="',$product['id'] ,'">';
 echo '<input type="hidden" name="name" value="',htmlspecialchars($product['name'], ENT_QUOTES, 'UTF-8'),'">';
 echo '<input type="hidden" name="price" value="',floatval($product['price']),'">';
-echo '<input type="submit" value="カートに入れる">';
+echo '<input type="submit" class="in_cart" value="カートに入れる">';
 echo '</div></form></main>';
 ?>
 <?php require 'includes/footer.php' ?>
