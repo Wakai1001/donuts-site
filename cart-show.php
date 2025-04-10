@@ -49,7 +49,7 @@ require 'includes/header.php'
 
   <?php else: ?>
     
-    <div class="merchandise_area">
+    <div class="merchandise_area no_items">
       <p>カートに商品がありません。</p>
     </div>
   
