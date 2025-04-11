@@ -69,7 +69,7 @@ $donuts10 =[
 
 $donuts11 =[
   'id' => 11,
-  'name' => 'クリームボックス（4個入り））',
+  'name' => 'クリームボックス（4個入り）',
   'price' => 1400
 ];
 
@@ -119,7 +119,7 @@ $donuts12 =[
 <input type="hidden" name="name" value="<?= htmlspecialchars($donuts1['name'], ENT_QUOTES, "UTF-8") ?>">
 <input type="hidden" name="price" value="<?= floatval($donuts1['price']) ?>">
 <input type="hidden" name="count" value="1">
-<input type="submit" class="cart_btn" value="カートに入れる"></form>
+<input type="submit" class="in_cart" value="カートに入れる"></form>
  <!-- ここまでが、カートに入れる -->
 
 </div>
@@ -142,7 +142,7 @@ $donuts12 =[
 <input type="hidden" name="name" value="<?= htmlspecialchars($donuts2['name'], ENT_QUOTES, "UTF-8") ?>">
 <input type="hidden" name="price" value="<?= floatval($donuts2['price']) ?>">
 <input type="hidden" name="count" value="1">
-<input type="submit" class="cart_btn" value="カートに入れる"></form>
+<input type="submit" class="in_cart" value="カートに入れる"></form>
  <!-- ここまでが、カートに入れる -->
 
   </div>
@@ -165,7 +165,7 @@ $donuts12 =[
 <input type="hidden" name="name" value="<?= htmlspecialchars($donuts3['name'], ENT_QUOTES, "UTF-8") ?>">
 <input type="hidden" name="price" value="<?= floatval($donuts3['price']) ?>">
 <input type="hidden" name="count" value="1">
-<input type="submit" class="cart_btn" value="カートに入れる"></form>
+<input type="submit" class="in_cart" value="カートに入れる"></form>
  <!-- ここまでが、カートに入れる -->
 
         </div>
@@ -188,7 +188,7 @@ $donuts12 =[
 <input type="hidden" name="name" value="<?= htmlspecialchars($donuts4['name'], ENT_QUOTES, "UTF-8") ?>">
 <input type="hidden" name="price" value="<?= floatval($donuts4['price']) ?>">
 <input type="hidden" name="count" value="1">
-<input type="submit" class="cart_btn" value="カートに入れる"></form>
+<input type="submit" class="in_cart" value="カートに入れる"></form>
  <!-- ここまでが、カートに入れる -->
         </div>
 
@@ -210,7 +210,7 @@ $donuts12 =[
 <input type="hidden" name="name" value="<?= htmlspecialchars($donuts5['name'], ENT_QUOTES, "UTF-8") ?>">
 <input type="hidden" name="price" value="<?= floatval($donuts5['price']) ?>">
 <input type="hidden" name="count" value="1">
-<input type="submit" class="cart_btn" value="カートに入れる"></form>
+<input type="submit" class="in_cart" value="カートに入れる"></form>
  <!-- ここまでが、カートに入れる -->
         </div>
 
@@ -232,7 +232,7 @@ $donuts12 =[
 <input type="hidden" name="name" value="<?= htmlspecialchars($donuts6['name'], ENT_QUOTES, "UTF-8") ?>">
 <input type="hidden" name="price" value="<?= floatval($donuts6['price']) ?>">
 <input type="hidden" name="count" value="1">
-<input type="submit" class="cart_btn" value="カートに入れる"></form>
+<input type="submit" class="in_cart" value="カートに入れる"></form>
  <!-- ここまでが、カートに入れる -->
 
         </div>
@@ -262,7 +262,7 @@ $donuts12 =[
 <input type="hidden" name="name" value="<?= htmlspecialchars($donuts7['name'], ENT_QUOTES, "UTF-8") ?>">
 <input type="hidden" name="price" value="<?= floatval($donuts7['price']) ?>">
 <input type="hidden" name="count" value="1">
-<input type="submit" class="cart_btn" value="カートに入れる"></form>
+<input type="submit" class="in_cart" value="カートに入れる"></form>
  <!-- ここまでが、カートに入れる -->
         </div>
 
@@ -284,7 +284,7 @@ $donuts12 =[
 <input type="hidden" name="name" value="<?= htmlspecialchars($donuts8['name'], ENT_QUOTES, "UTF-8") ?>">
 <input type="hidden" name="price" value="<?= floatval($donuts8['price']) ?>">
 <input type="hidden" name="count" value="1">
-<input type="submit" class="cart_btn" value="カートに入れる"></form>
+<input type="submit" class="in_cart" value="カートに入れる"></form>
  <!-- ここまでが、カートに入れる -->
         </div>
 
@@ -307,7 +307,7 @@ $donuts12 =[
 <input type="hidden" name="name" value="<?= htmlspecialchars($donuts9['name'], ENT_QUOTES, "UTF-8") ?>">
 <input type="hidden" name="price" value="<?= floatval($donuts9['price']) ?>">
 <input type="hidden" name="count" value="1">
-<input type="submit" class="cart_btn" value="カートに入れる"></form>
+<input type="submit" class="in_cart" value="カートに入れる"></form>
  <!-- ここまでが、カートに入れる -->
         </div>
 
@@ -329,7 +329,7 @@ $donuts12 =[
 <input type="hidden" name="name" value="<?= htmlspecialchars($donuts10['name'], ENT_QUOTES, "UTF-8") ?>">
 <input type="hidden" name="price" value="<?= floatval($donuts10['price']) ?>">
 <input type="hidden" name="count" value="1">
-<input type="submit" class="cart_btn" value="カートに入れる"></form>
+<input type="submit" class="in_cart" value="カートに入れる"></form>
  <!-- ここまでが、カートに入れる -->
         </div>
 
@@ -351,7 +351,7 @@ $donuts12 =[
 <input type="hidden" name="name" value="<?= htmlspecialchars($donuts11['name'], ENT_QUOTES, "UTF-8") ?>">
 <input type="hidden" name="price" value="<?= floatval($donuts11['price']) ?>">
 <input type="hidden" name="count" value="1">
-<input type="submit" class="cart_btn" value="カートに入れる"></form>
+<input type="submit" class="in_cart" value="カートに入れる"></form>
  <!-- ここまでが、カートに入れる -->
         </div>
 
@@ -373,7 +373,7 @@ $donuts12 =[
 <input type="hidden" name="name" value="<?= htmlspecialchars($donuts12['name'], ENT_QUOTES, "UTF-8") ?>">
 <input type="hidden" name="price" value="<?= floatval($donuts12['price']) ?>">
 <input type="hidden" name="count" value="1">
-<input type="submit" class="cart_btn" value="カートに入れる"></form>
+<input type="submit" class="in_cart" value="カートに入れる"></form>
  <!-- ここまでが、カートに入れる -->
         </div>
       </div>

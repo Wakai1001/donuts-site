@@ -39,7 +39,7 @@ require 'includes/header.php'
     <?php endforeach; ?>
 
     <div class="confirm_window">
-        <p>ご注文合計：<span class="price">税込&#12288;&#165;<?= number_format($total) ?></span></p>
+        <p class="total">ご注文合計：<span class="price">税込&#12288;&#165;<?= number_format($total) ?></span></p>
 
 
         <form action="purchase-confirm.php" method="post">
@@ -50,7 +50,7 @@ require 'includes/header.php'
   <?php else: ?>
     
     <div class="merchandise_area">
-      <p>カートに商品がありません。</p>
+      <p class="no_items">カートに商品がありません。</p>
     </div>
   
   <?php endif; ?>

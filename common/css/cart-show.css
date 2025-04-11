@@ -26,6 +26,7 @@
 .merchandise_area {
   margin: 20px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -161,20 +162,20 @@
     justify-content: start;
     align-items: start;
     row-gap: 10px;
-    column-gap: 10px;
+    column-gap: 30px;
   }
 
   /* 商品画像 */
   .merchandise_image {
     width: 24.5vw;
     /* height: 24.5vw; */
+    max-width: 335px;
     margin-bottom: 20px;
-    margin-left: 10px;
-    max-width: 100%;
     grid-row-start: 1;
     grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: span 2;
+    justify-self: start;
   }
 
   /* 商品名 */
@@ -194,6 +195,7 @@
   .price {
     font-size: 24px;
     color: #BF0000;
+    font-weight: 500;
     line-height: 1;
     letter-spacing: 0;
     /* margin-bottom: 20px; */
@@ -201,6 +203,11 @@
     grid-row-end: 3;
     grid-column-start: 2;
     grid-column-end: 3;
+  }
+
+  .total {
+    font-size: 24px;
+    font-weight: 500;
   }
 
   /* 商品の個数 */
@@ -216,6 +223,25 @@
     grid-column-start: 3;
     grid-column-end: 4;
     justify-self: end;
+  }
+
+  .no_items {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    justify-self: center;
+    /* justify-self: end; */
+  }
+
+  /* 合計の表示と購入に移動する表示の枠 */
+  .confirm_window {
+    /* height: 148px; */
+    font-size: 24px;
+    max-width: 1040px;
+    align-self: center;
+    text-align: center;
+    border: 2px solid #FFD233;
   }
 
   /* 削除する */
@@ -244,16 +270,12 @@
     align-self: center;
     text-align: center;
     border: 2px solid #FFD233;
-    /* grid-row-start: 4;
-  grid-row-end: 5;
-  grid-column-start: 1;
-  grid-column-end: 5; */
   }
 
   /* 枠の中の文字 */
   .confirm_window p {
     margin: 38px 0 20px;
-    font-size: 16px;
+    font-size: 24px;
     font-weight: 500;
   }
 

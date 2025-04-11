@@ -49,9 +49,6 @@ div {
   margin-bottom: 20px;
 }
 
-div:last-of-type {
-  margin-bottom: 40px;
-}
 
 .title {
   font-size: 12px;
@@ -76,6 +73,16 @@ input[type=submit] {
   line-height: 1;
   letter-spacing: 0;
   margin-bottom: 5px;
+}
+
+.center {
+  margin-bottom: 0;
+}
+
+.center {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 0;
 }
 
 .button {
@@ -120,13 +127,14 @@ input[type=submit] {
     margin-bottom: 40px;
   }
 
-  div:last-of-type {
-    margin-bottom: 80px;
-  }
 
   input[type=submit] {
     font-size: 20px;
     padding: 20px 60px;
+  }
+
+  .center {
+    margin-bottom: 10px;
   }
 
   .error {
